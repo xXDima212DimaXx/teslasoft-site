@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Media to Base64</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, user-scalable=no">
+	    <link rel="icon" type="image/png" href="https://users.jarvis.studio/home/images/jarvis.png">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.css">
+        <style>
+            html, body {
+                margin: 0;
+                padding: 0;
+                outline: none;
+                background-color: #212121;
+            }
+            
+            audio {
+                outline: none;
+            }
+            
+            video {
+                outline: none;
+            }
+            
+            button {
+                outline: none;
+            }
+            
+            h1 {
+                color: #fafafa;
+            }
+            
+            h3 {
+                color: #cecece;
+                padding: 0;
+                margin: 0;
+            }
+            
+            ::-webkit-scrollbar {
+                width: 16px;
+            }
+            
+            ::-webkit-user-select {
+                background-color: #2e8b57;
+            }
+            
+            /* Track */
+            ::-webkit-scrollbar-track {
+                background: #323232; 
+            }
+            
+            /* Handle */
+            ::-webkit-scrollbar-thumb {
+                background: #424242;
+                /*border-radius: 8px;*/
+            }
+            
+            /* Handle on hover */
+            ::-webkit-scrollbar-thumb:hover {
+                background: #616161;
+            }
+            
+            img {
+                width: 60%;
+                height: auto;
+                margin: 0;
+            }
+            
+            .container {
+                padding-top: 1rem;
+                padding-bottom: 1rem;
+            }
+            
+            textarea.form-control {
+                background-color: #424242;
+                border: none;
+                color: #cecece;
+                min-width: 98%;
+                max-width: 98%;
+                min-height: 500px;
+                height: auto;
+            }
+            
+            textarea.form-control:focus {
+                background-color: #515151;
+                color: #eeeeee;
+            }
+            
+            textarea.form-control:disabled, textarea.form-control[readonly] {
+                background-color: #323232;
+                border: none;
+                color: #999999;
+            }
+            
+            hr {
+                border : 2px solid #424242;
+            }
+        </style>
+    </head>
+    <body>
+        <div class = "container">
+            <h1>Encrypt media file to Base64</h1>
+            <hr>
+            <h3>1. Select a file</h3>
+            <input id = "inputFileToLoad" class = "btn btn-success" type = "file" style = "outline: none; margin-top: 20px; margin-bottom; 20px;" onchange = "encodeMediaFileAsURL();" />
+            <hr>
+            <h3>2. Output string</h3>
+            <div class = "form-group" style = "outline: none; margin-top: 20px; margin-bottom; 20px;">
+	            <textarea style = "max-width: 100%; min-width: 100%; min-height: 500px;" class = "form-control" id = "output" readonly></textarea>
+	        </div>
+	        <hr>
+	        <h3>3. Try to open follow (your) file on a new tab</h3>
+	        <div id = "imgTest" style = "text-align: center;"></div>
+	        
+	        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+            <script>
+                function encodeMediaFileAsURL() {
+                    var filesSelected = document.getElementById("inputFileToLoad").files;
+                    if (filesSelected.length > 0) {
+                        var fileToLoad = filesSelected[0];
+                        var fileReader = new FileReader();
+
+                        fileReader.onload = function(fileLoadedEvent) {
+                            var srcData = fileLoadedEvent.target.result;
+                            
+
+                            
+                            var fileType = fileToLoad.type;
+                            // alert(fileType);
+                            if (fileType == "image/png") {
+                                var newImage = document.createElement('img');
+                                newImage.src = srcData;
+                                document.getElementById("imgTest").innerHTML = newImage.outerHTML;
+                            } else if (fileType == "image/jpeg") {
+                                var newImage = document.createElement('img');
+                                newImage.src = srcData;
+                                document.getElementById("imgTest").innerHTML = newImage.outerHTML;
+                            } else if (fileType == "image/jpg") {
+                                var newImage = document.createElement('img');
+                                newImage.src = srcData;
+                                document.getElementById("imgTest").innerHTML = newImage.outerHTML;
+                            } else if (fileType == "image/gif") {
+                                var newImage = document.createElement('img');
+                                newImage.src = srcData;
+                                document.getElementById("imgTest").innerHTML = newImage.outerHTML;
+                            } else if (fileType == "image/tiff") {
+                                var newImage = document.createElement('img');
+                                newImage.src = srcData;
+                                document.getElementById("imgTest").innerHTML = newImage.outerHTML;
+                            } else if (fileType == "image/tif") {
+                                var newImage = document.createElement('img');
+                                newImage.src = srcData;
+                                document.getElementById("imgTest").innerHTML = newImage.outerHTML;
+                            } else if (fileType == "image/svg") {
+                                var newImage = document.createElement('img');
+                                newImage.src = srcData;
+                                document.getElementById("imgTest").innerHTML = newImage.outerHTML;
+                            } else if (fileType == "image/webp") {
+                                var newImage = document.createElement('img');
+                                newImage.src = srcData;
+                                document.getElementById("imgTest").innerHTML = newImage.outerHTML;
+                            } else if (fileType == "text/plain") {
+                                var newImage = document.createElement('p');
+                                newImage.value = srcData;
+                                document.getElementById("imgTest").innerHTML = newImage.outerHTML;
+                            } else if (fileType == "audio/mp3") {
+                                var newImage = document.createElement('audio');
+                                newImage.controls = true;
+                                newImage.src = srcData;
+                                document.getElementById("imgTest").innerHTML = newImage.outerHTML;
+                            } else if (fileType == "audio/mpeg") {
+                                var newImage = document.createElement('audio');
+                                newImage.controls = true;
+                                newImage.src = srcData;
+                                document.getElementById("imgTest").innerHTML = newImage.outerHTML;
+                            } else if (fileType == "audio/ogg") {
+                                var newImage = document.createElement('audio');
+                                newImage.controls = true;
+                                newImage.src = srcData;
+                                document.getElementById("imgTest").innerHTML = newImage.outerHTML;
+                            } else if (fileType == "audio/vaw") {
+                                var newImage = document.createElement('audio');
+                                newImage.controls = true;
+                                newImage.src = srcData;
+                                document.getElementById("imgTest").innerHTML = newImage.outerHTML;
+                            } else if (fileType == "video/mp4") {
+                                var newImage = document.createElement('video');
+                                newImage.controls = true;
+                                newImage.src = srcData;
+                                document.getElementById("imgTest").innerHTML = newImage.outerHTML;
+                            } else if (fileType == "video/webm") {
+                                var newImage = document.createElement('video');
+                                newImage.controls = true;
+                                newImage.src = srcData;
+                                document.getElementById("imgTest").innerHTML = newImage.outerHTML;
+                            } else {
+                                alert("Undefined data type");
+                            } document.getElementById("output").value = srcData;
+                        };
+                        fileReader.readAsDataURL(fileToLoad);
+                    }
+                }
+            </script>
+        </div>
+    </body>
+</html>

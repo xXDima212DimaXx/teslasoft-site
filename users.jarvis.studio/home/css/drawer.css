@@ -1,0 +1,247 @@
+body {
+  margin: 0;
+  position: relative;
+  background: #212121;
+  font-family: sans-serif;
+}
+#header {
+  height: 56px;
+  background: #db4437;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 3;
+  box-shadow: 0 3px 6px -3px rgba(0, 0, 0, 0.5);
+}
+#header .rx_icon {
+  float: right;
+  height: 56px;
+  width: 56px;
+}
+#header .title {
+  height: 100%;
+  line-height: 56px;
+  padding-left: 16px;
+  padding-right: 8px;
+  float: right;
+  color: white;
+  font-size: 18px;
+}
+.container {
+  padding: 0 1em;
+  padding-top: 64px;
+}
+.container .content {
+  box-shadow: 0 3px 10px -3px rgba(0, 0, 0, 0.3);
+  color: rgba(255, 255, 255, 0.87);
+  background: #212121;
+  padding: 1em;
+  padding-top: 0;
+  margin: 1em auto;
+  overflow: hidden;
+  max-width: 640px;
+  border-radius: 2px;
+}
+.container .content p {
+  line-height: 1.25em;
+}
+.container .content a {
+  text-decoration: none;
+  color: #0277bd;
+}
+.drawer .content {
+  height: 100%;
+  position: relative;
+  overflow-y: auto;
+}
+.drawer .content .header {
+  height: 150px;
+  background: #db4437;
+  position: relative;
+}
+.drawer .content .header .avatar {
+  height: 64px;
+  width: 64px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 100%;
+  position: absolute;
+  left: 16px;
+  top: 16px;
+}
+.drawer .content .header .text {
+  height: 60px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px 0;
+  color: white;
+}
+.drawer .content .header .text .field {
+  padding-left: 16px;
+  font-size: 14px;
+}
+.drawer .content .header .text .field.name {
+  font-weight: bold;
+}
+.drawer .content .header .text .field.info {
+  margin-top: 4px;
+}
+.drawer .content ul.menu {
+  padding: 8px 0;
+  list-style: none;
+  margin: 0;
+}
+.drawer .content ul.menu li.item {
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  height: 48px;
+  line-height: 48px;
+  padding-left: 72px;
+  color: rgba(255, 255, 255, 0.87);
+  position: relative;
+}
+.drawer .content ul.menu li.item.subheader {
+  color: rgba(255, 255, 255, 0.54);
+  padding-left: 16px;
+  margin-top: 8px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+.drawer .content ul.menu li.item.subheader:after {
+  content: none;
+}
+.drawer .content ul.menu li.item:after {
+  content: "";
+  background-image: url('https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_brightness_high_white_24px.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 24px;
+  width: 24px;
+  position: absolute;
+  left: 16px;
+  top: 12px;
+  opacity: 0.54;
+}
+.drawer .content ul.menu li.item:active {
+  background: rgba(255, 255, 255, 0.12);
+}
+/* Drawer Library */
+.rx_noselect {
+  /* iOS Safari */
+  -webkit-touch-callout: none;
+  /* Chrome/Safari/Opera */
+  -webkit-user-select: none;
+  /* Konqueror */
+  -khtml-user-select: none;
+  /* Firefox */
+  -moz-user-select: none;
+  /* Internet Explorer/Edge */
+  -ms-user-select: none;
+  /* Non-prefixed version, currently
+                                  not supported by any browser */
+  user-select: none;
+}
+.drawer_bg {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 6;
+  opacity: 0.001;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  visibility: hidden;
+}
+.drawer {
+  max-width: 320px;
+  width: 75%;
+  height: 100%;
+  left: 0px;
+  top: 0;
+  bottom: 0;
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  -o-transform: translateX(-100%);
+  transform: translateX(-100%);
+  background: #212121;
+  position: fixed;
+  z-index: 8;
+  opacity: 0.001;
+  -webkit-box-shadow: 3px 0 16px -3px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 3px 0 16px -3px rgba(0, 0, 0, 0.4);
+  -ms-box-shadow: 3px 0 16px -3px rgba(0, 0, 0, 0.4);
+  -o-box-shadow: 3px 0 16px -3px rgba(0, 0, 0, 0.4);
+  box-shadow: 3px 0 16px -3px rgba(0, 0, 0, 0.4);
+}
+.drawer .label {
+  position: absolute;
+  top: 56px;
+  bottom: 0;
+  width: 32px;
+  right: -32px;
+}
+.drawer .antiSelect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  visibility: hidden;
+}
+/* Hamburger Library */
+.rx_icon {
+  position: relative;
+  height: 40px;
+  width: 40px;
+}
+.rx_icon .ic {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  left: 50%;
+  margin-left: -12px;
+  top: 50%;
+  margin-top: -12px;
+}
+.rx_icon .ic .line {
+  position: absolute;
+  left: 3px;
+  right: 3px;
+  height: 2px;
+  background: white;
+  outline: 1px solid transparent;
+}
+.rx_icon .ic .line.one {
+  top: 6px;
+  -webkit-transform-origin: right bottom;
+  -moz-transform-origin: right bottom;
+  -ms-transform-origin: right bottom;
+  -o-transform-origin: right bottom;
+  transform-origin: right bottom;
+}
+.rx_icon .ic .line.two {
+  top: 11px;
+}
+.rx_icon .ic .line.thr {
+  -webkit-transform-origin: right top;
+  -moz-transform-origin: right top;
+  -ms-transform-origin: right top;
+  -o-transform-origin: right top;
+  transform-origin: right top;
+  top: 16px;
+}

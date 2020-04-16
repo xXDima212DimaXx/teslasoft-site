@@ -1,0 +1,1 @@
+function runCommand(){window.location.assign("$command");}

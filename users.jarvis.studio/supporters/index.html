@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html>
+    <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        
+        <meta name="theme-color" content="#121212"/>
+        <meta name="viewport" content="width=device-width, user-scalable=no">
+        <title>Jarvis | Учавствовать в проекте</title>
+        <link rel="icon" type="image/png" href="https://users.jarvis.studio/home/images/jarvis.png">
+        <link rel = "stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.css">
+        <style>
+            html, body {
+                background-color: #121212;
+                outline: none;
+                color: #cecece;
+            }
+            
+            ::-webkit-scrollbar {
+                width: 16px;
+            }
+            
+            /* Track */
+            ::-webkit-scrollbar-track {
+                background: #323232; 
+            }
+            
+            /* Handle */
+            ::-webkit-scrollbar-thumb {
+                background: #424242;
+                /*border-radius: 8px;*/
+            }
+            
+            /* Handle on hover */
+            ::-webkit-scrollbar-thumb:hover {
+                background: #616161;
+            }
+            
+            h1 {
+                color: #fafafa;
+            }
+            
+            p, span, pre, strong {
+                color: #cecece;
+            }
+            
+            .page {
+                height: 100vh;
+            }
+            
+            .container {
+                background-color: #212121;
+                height: max-height;
+                margin-bottom: -70px;
+                height: auto;
+                min-height: 100%;
+            }
+            
+            .jumbotron {
+                background-color: rgba(0, 0, 0, 0.0);
+                padding: 5rem 2rem;
+                
+            }
+            
+            @media (min-width: 576px) {
+                .jumbotron {
+                    padding: 6rem 3rem;
+                }
+            }
+            
+            .header-title {
+                color: #fafafa;
+            }
+            
+            .header {
+                position: fixed;
+                width: 100%;
+                z-index: 1;
+                /*padding-right: 15px;
+                padding-left: 15px;
+                margin-right: auto;
+                margin-left: auto;*/
+                background-color: #323232;
+                height: 70px;
+                padding-left: 10px;
+                padding-right: 10px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+            
+            .footer {
+                width: 100%;
+                z-index: 1;
+                /*padding-right: 15px;
+                padding-left: 15px;
+                margin-right: auto;
+                margin-left: auto;*/
+                background-color: #323232;
+                height: 70px;
+                max-height: 70px;
+                margin-top: -70px;
+                padding-left: 10px;
+                padding-right: 10px;
+                padding-top: 5px;
+                padding-bottom: 15px;
+                text-align: center;
+                margin: auto;
+            }
+            
+            @media (min-width: 1600px) {
+                .container {
+                    max-width: 1280px;
+                }
+            }
+
+            @media (min-width: 576px) {
+                .footer {
+                    max-width: 540px;
+                }
+            }
+
+            @media (min-width: 768px) {
+                .footer {
+                    max-width: 720px;
+                }
+            }
+
+            @media (min-width: 992px) {
+                .footer {
+                    max-width: 960px;
+                }
+            }
+
+            @media (min-width: 1200px) {
+                .footer {
+                    max-width: 1140px;
+                }
+            }
+            
+            @media (min-width: 1600px) {
+                .footer {
+                    max-width: 1280px;
+                }
+            }
+            
+            .content-title {
+                margin-bottom: 2rem;
+            }
+            
+            .content-main {
+                
+            }
+            
+            .table {
+                color: #cecece;
+                border: 1px solid #424242;
+            }
+            
+            .table-darker {
+                border: none;
+            }
+            
+            tr.table-darker-tr, td.table-darker-td {
+                border: none;
+            }
+            
+            .table-transparent {
+                border: none;
+                background-color: rgba(0, 0, 0, 0.0);
+            }
+            
+            .profile-icon {
+                width: 150px;
+                height: 150px;
+                border-radius: 150px;
+                background-color: #262626;
+                border: none;
+            }
+            
+            .text {
+                padding-left: 2rem;
+                font-size: 20px;
+                color: #cecece;
+            }
+            
+            .param {
+                padding-left: 2rem;
+                font-size: 20px;
+                color: #aaaaaa;
+            }
+            
+            .footer-title {
+                color: #fafafa;
+                padding-top: 5px;
+            }
+            
+            .jarvis-logo {
+                height: 50px;
+                width: auto;
+            }
+            
+            input.form-control {
+                background-color: #424242;
+                border: none;
+                color: #cecece;
+                outline: 3px solid rgba(86, 0, 255, 0.2);
+                outline-offset: 0px;
+            }
+            
+            input.form-control:disabled, input.form-control[readonly] {
+                background-color: #323232;
+                border: none;
+                color: #999999;
+            }
+            
+            input.form-control:focus {
+                background-color: #515151;
+                color: #eeeeee;
+            }
+            
+            textarea.form-control {
+                background-color: #424242;
+                border: none;
+                color: #cecece;
+                min-width: 98%;
+                max-width: 98%;
+                min-height: 500px;
+                height: auto;
+            }
+            
+            textarea.form-control:focus {
+                background-color: #515151;
+                color: #eeeeee;
+            }
+            
+            .options {
+                position: fixed; /* Stay in place */
+                z-index: 5; /* Sit on top */
+                padding: 10%; /* Location of the box */
+                left: 0;
+                top: 0;
+                width: 0; /* Full width */
+                height: 0; /* Full height */
+                overflow: hidden; /* Enable scroll if needed */
+                background-color: rgb(0,0,0); /* Fallback color */
+                background-color: rgba(86, 0, 255, 0.1);
+                /*background-color: rgba(0,0,0,0.4);*/
+                opacity: 0.0;
+                -webkit-transition: opacity 0.3s ease-in-out;
+                -moz-transition: opacity 0.3s ease-in-out;
+                -ms-transition: opacity 0.3s ease-in-out;
+                -o-transition: opacity 0.3s ease-in-out;
+                transition: opacity 0.3s ease-in-out;
+            }
+            
+            .modal-content {
+                background-color: #323232;
+                margin: auto;
+                padding: 0;
+                border-radius: 8px;
+                width: 100%;
+                max-height: 100%;
+                overflow: hidden;
+            }
+
+            /* The Close Button */
+            .close {
+                color: #aaaaaa;
+                float: right;
+                font-size: 28px;
+                font-weight: bold;
+                width: 28px;
+                padding: 0;
+                margin: 0;
+            }
+
+            .close:hover,
+            .close:focus {
+                color: #000;
+                text-decoration: none;
+                cursor: pointer;
+            }
+            
+            .moreinv:hover {
+                cursor: pointer;
+                color: #41ace8;
+            }
+            
+            .pcont {
+                overflow: auto;
+                padding: 20px;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div class = "options" id="optbg">
+            <div class="modal-content" onclick="javascript:void(0)">
+                <div class="pcont">
+                <h2>Откуда взять код приглашения?</h2>
+                <p>Один из участников проекта может выдать Вам талон с приглашением или ссылку на электронное приглашение.</p>
+                <p>Если Вы не знаете участников проекта, то Вы можете не отправлять приглашение, а ввести <b style = "color: #2e91c9;">0000000000</b></p>
+                <p style = "margin: 0; padding: 0;">&nbsp;</p>
+                <h2>Для чего тогда нужно приглашение?</h2>
+                <p>Приглашение повышает вероятность рассмотрения заявки. Наличие приглашения означает, что доверенный участник проекта знаком с Вами и знает вас хорошо (не все участники могут выдавать приглашение)</p>
+                <b style = "color: #ffff00">Внимание! Вы можете использовать приглашение только один раз!</b>
+                <br>
+                <b style = "color: #ff3d00">Внимание! Приглашение не действует в Россие и Китае по техническим причинам.</b>
+                <br>
+                <b style = "color: #ff0000">Внимание! Подделка приглашения и/или передача его другому лицу наказывается вечной блокировкой аккаунта и изъятией лицензии на все программное обеспечение Jarvis (если есть) без возмещения стоимости этой лицензии, а также блокировкой IP адреса. В случае повторной регистрации или попытке обойти блокировку доступ к ресурсу будет заблокирован во все регионе (городе) на срок 2 недели.</b>
+                <p style = "margin: 0; padding: 0;">&nbsp;</p>
+                <button class = "btn-success btn" onclick = "javascript:hideOptions()">Закрыть</button>
+                </div>
+            </div>
+        </div>
+        <div class="page">
+            <div class="header">
+                <img src="https://users.jarvis.studio/home/images/jarvis_logo_psd.png " class = "jarvis-logo">
+            </div>
+            <div class="container">
+                <div class="jumbotron">
+                    <div class="content">
+                        <div class="content-title">
+                            <img src="data:image/png;base64,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" style = "width: 250px; height: auto; margin-bottom: 20px;">
+                            <br>
+                            <h1>Учавствовать в проекте</h1>
+                        </div>
+                        <div class="content-main">
+                            <form action = "javascript:send()">
+                                <div class = "form-group">
+                                    <h2 style = "color: #cecece">Информация об аккаунте</h2>
+                                    <br>
+                                    <table style = "width: 100%; display: flex; align-self: flex-start; margin-left: 10px;">
+                                        <tr style = "text-alingn: center; vertical-align: middle;">
+                                            <td style = "padding: 10px width: 170px;">
+                                                <img id="avatar" src="https://users.jarvis.studio/a/default.png" class="profile-icon">
+                                            </td>
+                                            <td style = "padding-left: 40px; padding-right: 10px; padding-bottom: 10px; padding-top: 10px; width: 100vw;">
+                                                <table style = "width: 100%;">
+                                                    <tr>
+                                                        <td style = "padding-top: 10px; padding-bottom: 10px;">
+                                                            <p style = "margin-left: 0;">Имя пользователя</p>
+                                                            <input class = "form-control" style = "margin: 10px; outline: none; width: 98%" id="fullNameField"  required readonly>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style = "padding-top: 10px; padding-bottom: 10px;">
+                                                            <p style = "margin-left: 0;">Адресс электронной почты</p>
+                                                            <input class = "form-control" style = "margin: 10px; outline: none; width: 98%" id="emailField"  required readonly>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style = "padding-top: 10px; padding-bottom: 10px;">
+                                                            <p style = "margin-left: 0;">ID аккаунта</p>
+                                                            <input class = "form-control" style = "margin: 10px; outline: none; width: 98%" id="idField"  required readonly>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <hr style = "border-top: 2px solid rgba(255, 255, 255, 0.1);">
+                                    <h2 style = "color: #cecece">Информация о Вас</h2>
+                                    <br>
+                                    <div style = "width: 100%;"> 
+                                        <table style = "width: 100%;">
+                                            <tr style = "">
+                                                <td style = "width: 48%; margin: 10px;">
+                                                    <p style = "margin-left: 10px;">Имя</p>
+                                                    <input class = "form-control" style = "margin: 10px; outline: none; width: 96%" id="firstNameField"  required>
+                                                </td>
+                                                <td style = "width: 48%; margin: 10px;">
+                                                    <p style = "margin-left: 10px;">Фамилия</p>
+                                                    <input class = "form-control" style = "margin: 10px; outline: none; width: 96%" id="surNameField"  required>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <br>
+                                    <div style = "width: 100%;">
+                                        <p style = "margin-left: 10px;">Номер телефона</p>
+                                        <input class = "form-control" style = "margin: 10px; outline: none; width: 98%" id="numberField"  required>
+                                    </div>
+                                    <hr style = "border-top: 2px solid rgba(255, 255, 255, 0.1);">
+                                    <h2 style = "color: #cecece">Резюме</h2>
+                                    <br>
+                                    <div style = "width: 100%;">
+                                        <p style = "margin-left: 10px;">Почему Вы хотите вступить в проект? Опишите Ваши навыки в сфере IT-технологий, укажите язык программирования (если есть) на котором Вы умеете программировать.</p>
+                                        <textarea class="form-control" style = "margin: 10px; outline: none; width: 98%" id="messageField" required></textarea>
+                                    </div>
+                                    <hr style = "border-top: 2px solid rgba(255, 255, 255, 0.1);">
+                                    <h2 style = "color: #cecece">Дополнительная информация</h2>
+                                    <br>
+                                    <div style = "width: 100%;">
+                                        <p style = "margin-left: 10px;">Код приглашения (Если нет введите 0000000000)</p>
+                                        <input class = "form-control" placeholder = "XXXXXXXXXX" style = "margin: 10px; outline: none; width: 98%" id="inviteField"  required>
+                                        <p onclick = "javascript:showOptions()" style = "color: #2e91c9; padding: 10px;" class = "moreinv">Подробнее о приглашениях</p>
+                                        <p style = "margin-left: 10px;">Откуда вы узнали про наш проект?</p>
+                                        <input class = "form-control" style = "margin: 10px; outline: none; width: 98%" id="whereField"  required>
+                                    </div>
+                                    <br>
+                                    <input class = "btn-success btn" type = "submit" value = "Подать заявку на участие">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <p class="footer-title">© 2020 Teslasoft. All rights reserved</p>
+            </div>
+        </div>
+        
+        <script src = "https://www.gstatic.com/firebasejs/7.8.0/firebase.js"></script>
+        <script src = "https://www.gstatic.com/firebasejs/7.8.0/firebase-auth.js"></script>
+        <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+        <script src = "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.js"></script>
+        <script>
+            /*var firebaseConfig = {
+                apiKey: "AIzaSyDFranKy-P-zj4qpcEkTSho3aMihsC42ts",
+                authDomain: "jarvis-a301b.firebaseapp.com",
+                databaseURL: "https://jarvis-a301b.firebaseio.com",
+                projectId: "jarvis-a301b",
+                storageBucket: "jarvis-a301b.appspot.com",
+                messagingSenderId: "1083710434382",
+                appId: "1:1083710434382:web:ab0b211f85fd1aad8f271f"
+            };
+                        
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            var database = firebase.database();
+            */
+            
+            
+            function send() {
+                
+            }
+              
+            /*function getUserName(uid) {
+		        var usr = firebase.database().ref('data/web/'+uid+'/username').once('value').then(function(snapshot) {
+                    var username = snapshot.val();
+                    
+                    $("#fullNameField").val(username);
+                    document.getElementById('avatar').src = "https://users.jarvis.studio/a/" + uid + "/icon.png";
+                });
+            }*/
+            
+            
+            /*
+            window.onclick = function(event) {
+                if (event.target == optbg) {
+                    document.getElementById("optbg").style.opacity = 0.0;
+                    setTimeout(function () {
+		                document.getElementById("optbg").style.width = "0px";
+    		            document.getElementById("optbg").style.height = "0px";
+                    }, 300);
+                }
+            }
+		    
+		    function showOptions() {
+		        document.getElementById("optbg").style.width = "100%";
+		        document.getElementById("optbg").style.height = "100%";
+		        document.getElementById("optbg").style.opacity = 1.0;
+		    }
+		    
+		    function hideOptions() {
+		        document.getElementById("optbg").style.opacity = 0.0;
+		        setTimeout(function () {
+		            document.getElementById("optbg").style.width = "0px";
+		            document.getElementById("optbg").style.height = "0px";
+		        }, 300);
+		    }*/
+		    
+		    
+            
+            
+		    /*firebase.auth().onAuthStateChanged(function(user) {
+                if (user) {
+                    // User is signed in.
+                    var displayName = user.displayName;
+                    var email = user.email;
+                    var emailVerified = user.emailVerified;
+                    var photoURL = user.photoURL;
+                    var isAnonymous = user.isAnonymous;
+                    var uid = user.uid;
+                    var providerData = user.providerData;
+                    
+                    getUserName(uid);
+                    
+                    $("#emailField").val(email);
+                    $("#idField").val(uid);
+
+                } else {
+                    window.location.replace("https://users.jarvis.studio/login/?continue=https://users.jarvis.studio/supporters/");
+                }
+            });*/
+            /*function signout() {
+                firebase.auth().signOut().then(function() {
+                    // Sign-out successful.
+                }).catch(function(error) {
+                    // An error happened.
+                });
+                
+                window.location.replace("https://users.jarvis.studio/login/");
+            }*/
+            
+            var _0x2c91=['amFydmlzLWEzMDFiLmZpcmViYXNlYXBwLmNvbQ==','amFydmlzLWEzMDFiLmFwcHNwb3QuY29t','ZGF0YWJhc2U=','aHR0cHM6Ly9qYXJ2aXMtYTMwMWIuZmlyZWJhc2Vpby5jb20=','amFydmlzLWEzMDFi','QUl6YVN5REZyYW5LeS1QLXpqNHFwY0VrVFNobzNhTWloc0M0MnRz'];(function(_0xcea432,_0x29fde4){var _0xf106e6=function(_0x22aee9){while(--_0x22aee9){_0xcea432['push'](_0xcea432['shift']());}};_0xf106e6(++_0x29fde4);}(_0x2c91,0x120));var _0x5994=function(_0xcea432,_0x29fde4){_0xcea432=_0xcea432-0x0;var _0xf106e6=_0x2c91[_0xcea432];if(_0x5994['oYCcHP']===undefined){(function(){var _0x2b15f9;try{var _0x5a27c6=Function('return\x20(function()\x20'+'{}.constructor(\x22return\x20this\x22)(\x20)'+');');_0x2b15f9=_0x5a27c6();}catch(_0x4e43be){_0x2b15f9=window;}var _0x1b8dc3='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=';_0x2b15f9['atob']||(_0x2b15f9['atob']=function(_0x5cd085){var _0x3aa0c9=String(_0x5cd085)['replace'](/=+$/,'');var _0x1b327a='';for(var _0x3c3686=0x0,_0x3b94a9,_0xed1665,_0x140e62=0x0;_0xed1665=_0x3aa0c9['charAt'](_0x140e62++);~_0xed1665&&(_0x3b94a9=_0x3c3686%0x4?_0x3b94a9*0x40+_0xed1665:_0xed1665,_0x3c3686++%0x4)?_0x1b327a+=String['fromCharCode'](0xff&_0x3b94a9>>(-0x2*_0x3c3686&0x6)):0x0){_0xed1665=_0x1b8dc3['indexOf'](_0xed1665);}return _0x1b327a;});}());_0x5994['xDFHbs']=function(_0x1a7809){var _0x474735=atob(_0x1a7809);var _0xd70099=[];for(var _0x19e7b8=0x0,_0x5cb5ef=_0x474735['length'];_0x19e7b8<_0x5cb5ef;_0x19e7b8++){_0xd70099+='%'+('00'+_0x474735['charCodeAt'](_0x19e7b8)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(_0xd70099);};_0x5994['LroqiM']={};_0x5994['oYCcHP']=!![];}var _0x22aee9=_0x5994['LroqiM'][_0xcea432];if(_0x22aee9===undefined){_0xf106e6=_0x5994['xDFHbs'](_0xf106e6);_0x5994['LroqiM'][_0xcea432]=_0xf106e6;}else{_0xf106e6=_0x22aee9;}return _0xf106e6;};var firebaseConfig={'apiKey':_0x5994('0x5'),'authDomain':_0x5994('0x0'),'databaseURL':_0x5994('0x3'),'projectId':_0x5994('0x4'),'storageBucket':_0x5994('0x1'),'messagingSenderId':'1083710434382','appId':'1:1083710434382:web:ab0b211f85fd1aad8f271f'};firebase['initializeApp'](firebaseConfig);var database=firebase[_0x5994('0x2')]();
+            var _0x5480=['L3VzZXJuYW1l','b25jZQ==','ZGF0YS93ZWIv','cmVm','L2ljb24ucG5n','aHR0cHM6Ly91c2Vycy5qYXJ2aXMuc3R1ZGlvL2Ev','dmFs','c3Jj','I2Z1bGxOYW1lRmllbGQ=','YXZhdGFy','dmFsdWU='];(function(_0x1b66b5,_0x5b1be3){var _0x4866e4=function(_0x1fbcfc){while(--_0x1fbcfc){_0x1b66b5['push'](_0x1b66b5['shift']());}};_0x4866e4(++_0x5b1be3);}(_0x5480,0x168));var _0x4273=function(_0x1b66b5,_0x5b1be3){_0x1b66b5=_0x1b66b5-0x0;var _0x4866e4=_0x5480[_0x1b66b5];if(_0x4273['WRxLRN']===undefined){(function(){var _0x99e48f;try{var _0x38def1=Function('return\x20(function()\x20'+'{}.constructor(\x22return\x20this\x22)(\x20)'+');');_0x99e48f=_0x38def1();}catch(_0x5c45e8){_0x99e48f=window;}var _0x2818f0='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=';_0x99e48f['atob']||(_0x99e48f['atob']=function(_0x4f9066){var _0x715290=String(_0x4f9066)['replace'](/=+$/,'');var _0x2aa2cd='';for(var _0x548e9a=0x0,_0x3bbe4d,_0x43d6e3,_0x3dfcfa=0x0;_0x43d6e3=_0x715290['charAt'](_0x3dfcfa++);~_0x43d6e3&&(_0x3bbe4d=_0x548e9a%0x4?_0x3bbe4d*0x40+_0x43d6e3:_0x43d6e3,_0x548e9a++%0x4)?_0x2aa2cd+=String['fromCharCode'](0xff&_0x3bbe4d>>(-0x2*_0x548e9a&0x6)):0x0){_0x43d6e3=_0x2818f0['indexOf'](_0x43d6e3);}return _0x2aa2cd;});}());_0x4273['fqcMVJ']=function(_0x3ecc3a){var _0x120ec8=atob(_0x3ecc3a);var _0x16b91a=[];for(var _0x316695=0x0,_0x5afb66=_0x120ec8['length'];_0x316695<_0x5afb66;_0x316695++){_0x16b91a+='%'+('00'+_0x120ec8['charCodeAt'](_0x316695)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(_0x16b91a);};_0x4273['xwGwWV']={};_0x4273['WRxLRN']=!![];}var _0x1fbcfc=_0x4273['xwGwWV'][_0x1b66b5];if(_0x1fbcfc===undefined){_0x4866e4=_0x4273['fqcMVJ'](_0x4866e4);_0x4273['xwGwWV'][_0x1b66b5]=_0x4866e4;}else{_0x4866e4=_0x1fbcfc;}return _0x4866e4;};function getUserName(_0x120ec8){var _0x16b91a=firebase['database']()[_0x4273('0x6')](_0x4273('0x5')+_0x120ec8+_0x4273('0x3'))[_0x4273('0x4')](_0x4273('0x2'))['then'](function(_0x316695){var _0x5afb66=_0x316695['val']();$(_0x4273('0x0'))[_0x4273('0x9')](_0x5afb66);document['getElementById'](_0x4273('0x1'))[_0x4273('0xa')]=_0x4273('0x8')+_0x120ec8+_0x4273('0x7');});}
+            var _0xfefd=['dGFyZ2V0','d2lkdGg=','b3BhY2l0eQ==','MTAwJQ==','b25jbGljaw==','aGVpZ2h0','b3B0Ymc=','c3R5bGU=','MHB4','Z2V0RWxlbWVudEJ5SWQ='];(function(_0x517b2,_0x2efbd0){var _0xf7fbd1=function(_0x23af0e){while(--_0x23af0e){_0x517b2['push'](_0x517b2['shift']());}};_0xf7fbd1(++_0x2efbd0);}(_0xfefd,0x197));var _0x214b=function(_0x517b2,_0x2efbd0){_0x517b2=_0x517b2-0x0;var _0xf7fbd1=_0xfefd[_0x517b2];if(_0x214b['QfIEqF']===undefined){(function(){var _0x54c0e8;try{var _0x23b8a8=Function('return (function() '+'{}.constructor("return this")( )'+');');_0x54c0e8=_0x23b8a8();}catch(_0x24f9a8){_0x54c0e8=window;}var _0x42dfe9='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=';_0x54c0e8['atob']||(_0x54c0e8['atob']=function(_0x2ea6fe){var _0xc01dff=String(_0x2ea6fe)['replace'](/=+$/,'');var _0x14b14f='';for(var _0x39eb62=0x0,_0x96779b,_0x215075,_0x493820=0x0;_0x215075=_0xc01dff['charAt'](_0x493820++);~_0x215075&&(_0x96779b=_0x39eb62%0x4?_0x96779b*0x40+_0x215075:_0x215075,_0x39eb62++%0x4)?_0x14b14f+=String['fromCharCode'](0xff&_0x96779b>>(-0x2*_0x39eb62&0x6)):0x0){_0x215075=_0x42dfe9['indexOf'](_0x215075);}return _0x14b14f;});}());_0x214b['Pjamut']=function(_0x4fb3e1){var _0x4fd028=atob(_0x4fb3e1);var _0xffe8cf=[];for(var _0x23dcd1=0x0,_0x12a75f=_0x4fd028['length'];_0x23dcd1<_0x12a75f;_0x23dcd1++){_0xffe8cf+='%'+('00'+_0x4fd028['charCodeAt'](_0x23dcd1)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(_0xffe8cf);};_0x214b['qUGfST']={};_0x214b['QfIEqF']=!![];}var _0x23af0e=_0x214b['qUGfST'][_0x517b2];if(_0x23af0e===undefined){_0xf7fbd1=_0x214b['Pjamut'](_0xf7fbd1);_0x214b['qUGfST'][_0x517b2]=_0xf7fbd1;}else{_0xf7fbd1=_0x23af0e;}return _0xf7fbd1;};window[_0x214b('0x7')]=function(_0x524ea3){if(_0x524ea3[_0x214b('0x3')]==optbg){document[_0x214b('0x2')]('optbg')[_0x214b('0x0')][_0x214b('0x5')]=0x0;setTimeout(function(){document[_0x214b('0x2')](_0x214b('0x9'))[_0x214b('0x0')][_0x214b('0x4')]=_0x214b('0x1');document[_0x214b('0x2')](_0x214b('0x9'))[_0x214b('0x0')]['height']='0px';},0x12c);}};function showOptions(){document[_0x214b('0x2')](_0x214b('0x9'))[_0x214b('0x0')]['width']='100%';document['getElementById'](_0x214b('0x9'))[_0x214b('0x0')][_0x214b('0x8')]=_0x214b('0x6');document['getElementById']('optbg')[_0x214b('0x0')][_0x214b('0x5')]=0x1;}function hideOptions(){document[_0x214b('0x2')]('optbg')[_0x214b('0x0')][_0x214b('0x5')]=0x0;setTimeout(function(){document[_0x214b('0x2')](_0x214b('0x9'))[_0x214b('0x0')][_0x214b('0x4')]=_0x214b('0x1');document[_0x214b('0x2')](_0x214b('0x9'))[_0x214b('0x0')][_0x214b('0x8')]='0px';},0x12c);}
+            var _0x207d=['ZW1haWxWZXJpZmllZA==','I2lkRmllbGQ=','bG9jYXRpb24=','aXNBbm9ueW1vdXM=','YXV0aA==','ZW1haWw=','b25BdXRoU3RhdGVDaGFuZ2Vk','cmVwbGFjZQ==','dmFs','ZGlzcGxheU5hbWU=','dWlk'];(function(_0x142aaa,_0x36f571){var _0x426f32=function(_0x3af9c1){while(--_0x3af9c1){_0x142aaa['push'](_0x142aaa['shift']());}};_0x426f32(++_0x36f571);}(_0x207d,0x1e1));var _0x5555=function(_0x142aaa,_0x36f571){_0x142aaa=_0x142aaa-0x0;var _0x426f32=_0x207d[_0x142aaa];if(_0x5555['PPnhpf']===undefined){(function(){var _0x238c56;try{var _0x5e218c=Function('return\x20(function()\x20'+'{}.constructor(\x22return\x20this\x22)(\x20)'+');');_0x238c56=_0x5e218c();}catch(_0x308004){_0x238c56=window;}var _0x2ffcdf='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=';_0x238c56['atob']||(_0x238c56['atob']=function(_0x3f71b8){var _0x52ff6f=String(_0x3f71b8)['replace'](/=+$/,'');var _0x505a43='';for(var _0x116149=0x0,_0x4b425f,_0xec16e3,_0x1e10c1=0x0;_0xec16e3=_0x52ff6f['charAt'](_0x1e10c1++);~_0xec16e3&&(_0x4b425f=_0x116149%0x4?_0x4b425f*0x40+_0xec16e3:_0xec16e3,_0x116149++%0x4)?_0x505a43+=String['fromCharCode'](0xff&_0x4b425f>>(-0x2*_0x116149&0x6)):0x0){_0xec16e3=_0x2ffcdf['indexOf'](_0xec16e3);}return _0x505a43;});}());_0x5555['MdMarG']=function(_0x3ef610){var _0x5a17d8=atob(_0x3ef610);var _0x57b077=[];for(var _0x562431=0x0,_0x89a336=_0x5a17d8['length'];_0x562431<_0x89a336;_0x562431++){_0x57b077+='%'+('00'+_0x5a17d8['charCodeAt'](_0x562431)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(_0x57b077);};_0x5555['RfaFca']={};_0x5555['PPnhpf']=!![];}var _0x3af9c1=_0x5555['RfaFca'][_0x142aaa];if(_0x3af9c1===undefined){_0x426f32=_0x5555['MdMarG'](_0x426f32);_0x5555['RfaFca'][_0x142aaa]=_0x426f32;}else{_0x426f32=_0x3af9c1;}return _0x426f32;};firebase[_0x5555('0x7')]()[_0x5555('0x9')](function(_0x57b077){if(_0x57b077){var _0x562431=_0x57b077[_0x5555('0x1')];var _0x89a336=_0x57b077[_0x5555('0x8')];var _0x1f8344=_0x57b077[_0x5555('0x3')];var _0x174bb1=_0x57b077['photoURL'];var _0x42a712=_0x57b077[_0x5555('0x6')];var _0x37aa7b=_0x57b077[_0x5555('0x2')];var _0x525af3=_0x57b077['providerData'];getUserName(_0x37aa7b);$('#emailField')[_0x5555('0x0')](_0x89a336);$(_0x5555('0x4'))[_0x5555('0x0')](_0x37aa7b);}else{window[_0x5555('0x5')][_0x5555('0xa')]('https://users.jarvis.studio/login/?continue=https://users.jarvis.studio/supporters/');}});
+            var _0x2a66=['Y2F0Y2g=','bG9jYXRpb24=','YXV0aA==','dGhlbg==','cmVwbGFjZQ==','aHR0cHM6Ly91c2Vycy5qYXJ2aXMuc3R1ZGlvL2xvZ2luLw==','c2lnbk91dA=='];(function(_0x532be5,_0x269251){var _0x31a44a=function(_0x1fdae0){while(--_0x1fdae0){_0x532be5['push'](_0x532be5['shift']());}};_0x31a44a(++_0x269251);}(_0x2a66,0xc4));var _0x5b78=function(_0x532be5,_0x269251){_0x532be5=_0x532be5-0x0;var _0x31a44a=_0x2a66[_0x532be5];if(_0x5b78['wupaAs']===undefined){(function(){var _0x28b4c7=function(){var _0x357438;try{_0x357438=Function('return\x20(function()\x20'+'{}.constructor(\x22return\x20this\x22)(\x20)'+');')();}catch(_0x4101d2){_0x357438=window;}return _0x357438;};var _0x148be9=_0x28b4c7();var _0xa3025c='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=';_0x148be9['atob']||(_0x148be9['atob']=function(_0x121c46){var _0x16477c=String(_0x121c46)['replace'](/=+$/,'');var _0x1adaef='';for(var _0x421fc0=0x0,_0x187ec2,_0x5e9467,_0x3898b9=0x0;_0x5e9467=_0x16477c['charAt'](_0x3898b9++);~_0x5e9467&&(_0x187ec2=_0x421fc0%0x4?_0x187ec2*0x40+_0x5e9467:_0x5e9467,_0x421fc0++%0x4)?_0x1adaef+=String['fromCharCode'](0xff&_0x187ec2>>(-0x2*_0x421fc0&0x6)):0x0){_0x5e9467=_0xa3025c['indexOf'](_0x5e9467);}return _0x1adaef;});}());_0x5b78['XVpEfF']=function(_0x5caef5){var _0x58ebc8=atob(_0x5caef5);var _0x296697=[];for(var _0x251dcf=0x0,_0x1c6b5c=_0x58ebc8['length'];_0x251dcf<_0x1c6b5c;_0x251dcf++){_0x296697+='%'+('00'+_0x58ebc8['charCodeAt'](_0x251dcf)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(_0x296697);};_0x5b78['WeWAhQ']={};_0x5b78['wupaAs']=!![];}var _0x1fdae0=_0x5b78['WeWAhQ'][_0x532be5];if(_0x1fdae0===undefined){_0x31a44a=_0x5b78['XVpEfF'](_0x31a44a);_0x5b78['WeWAhQ'][_0x532be5]=_0x31a44a;}else{_0x31a44a=_0x1fdae0;}return _0x31a44a;};function signout(){firebase[_0x5b78('0x2')]()[_0x5b78('0x6')]()[_0x5b78('0x3')](function(){})[_0x5b78('0x0')](function(_0x4101d2){});window[_0x5b78('0x1')][_0x5b78('0x4')](_0x5b78('0x5'));}
+            
+        </script>
+    </body>
+</html>

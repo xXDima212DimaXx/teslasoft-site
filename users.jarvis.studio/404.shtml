@@ -1,0 +1,82 @@
+
+<!DOCTYPE Html>
+<html>
+    <head>
+        <title>404</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content= "width=device-width, user-scalable=no">
+        <style>
+            .a {
+                width: 60px;
+                height: 60px;
+                
+            }
+            html {
+                padding: 0px;
+                margin: 0;
+            }
+            body {
+                padding: 10px;
+                margin: 0;
+                background-color: #101016;
+                text-align: center;
+                color: #b20021;
+                font-size: 16px;
+                -webkit-touch-callout: none; /* iOS Safari */
+                -webkit-user-select: none; /* Safari */
+                -khtml-user-select: none; /* Konqueror HTML */
+                -moz-user-select: none; /* Firefox */
+                -ms-user-select: none; /* Internet Explorer/Edge */
+                user-select: none;
+            }
+            img {
+                padding: 0px;
+                margin: 0;
+                width: 100px;
+                height: 100px;
+            }
+            .container { 
+                position: relative;
+                height: 590px;
+                width: 340px;
+            }
+
+            .center {
+                margin: 0;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                text-align: center;
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+            }
+            
+            p {
+                /*position: fixed;*/
+                text-align: center;
+                width: 340px;
+                top: 49%;
+                padding: 0;
+                -webkit-touch-callout: none; /* iOS Safari */
+                -webkit-user-select: none; /* Safari */
+                -khtml-user-select: none; /* Konqueror HTML */
+                -moz-user-select: none; /* Firefox */
+                -ms-user-select: none; /* Internet Explorer/Edge */
+                user-select: none;
+            }
+            .icn {
+                margin-bottom: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="center">
+                <div class="notfound">
+                    <img src="https://users.jarvis.studio/ic_breaked_photo.png" class="icn"/>
+                    <p>Не удалсь открыть избражение<br/>(Изображение не найдено)</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Reviews library</title>
+		<meta name = "viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+		<meta charset = "utf-8">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<link rel="stylesheet" href="./css/material-red.min.css">
+		<script defer src="./js/material.js"></script>
+		<!--<link rel="stylesheet" href="./css/material-components.css">
+		<script defer src="./js/material-components.js"></script>-->
+		<link rel="stylesheet" href="./css/mdc.textfield.min.css">
+		<script defer src="./js/mdc.textfield.min.js"></script>
+		<style>
+			html, body {
+				padding: 0;
+				margin: 0;
+					-webkit-tap-highlight-color: rgba(0,0,0,0);
+			}
+			
+			::-webkit-scrollbar {
+				width: 0px;
+			}
+			
+			::-webkit-scrollbar-track {
+				background: #323232; 
+			}
+            
+			::-webkit-scrollbar-thumb {
+				background: #424242;
+			}
+            
+			::-webkit-scrollbar-thumb:hover {
+				background: #616161;
+			}
+			
+			.layout-main {
+				width: 100vw;
+				height: calc(100vh-85px);
+				background-color: #fafafa;
+				overflow: hidden;
+				padding-top: 85px;
+					-webkit-tap-highlight-color: rgba(0,0,0,0);
+			}
+			
+			.review-form {
+				width: 100%;
+				padding: 0px;
+					-webkit-tap-highlight-color: rgba(0,0,0,0);
+					-webkit-user-select: none;
+					-moz-user-select: none;
+					-ms-user-select: none;
+					-o-user-select: none;
+					user-select: none;
+			}
+			
+			.inp {
+				min-width: 100%;
+				max-width: 100%;
+			}
+			
+			.reviews {
+				margin: 16px;
+			}
+			
+			.rev-box {
+				width: 100%;
+				height: 140px;
+				padding-right: 16px;
+				padding-top: 8px;
+				padding-bottom: 8px;
+			}
+			
+			.rev-text {
+				width: clac(100vw-30px);
+				height: 120px;
+				padding: 8px;
+				background-color: #fafafa;
+				border-radius: 3px;
+				box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.6);
+			}
+			
+			.rev-name {
+				font-size: 18px;
+				height: 30px;
+				padding: 0;
+				margin: 0;
+				color: #db4437;
+			}
+			
+			.rev-email {
+				font-size: 16px;
+				height: 30px;
+				padding: 0;
+				margin: 0;
+				color: #515151;
+			}
+			
+			.rev-message {
+				font-size: 16px;
+				height: 30px;
+				padding: 0;
+				margin: 0;
+				color: #424242;
+			}
+			
+			.rev-time {
+				font-size: 16px;
+				height: 30px;
+				padding: 0;
+				margin: 0;
+				color: #616161;
+			}
+			
+			.review-block {
+				padding: 8px;
+			}
+			
+			.content {
+				width: 100%;
+				height: 100%;
+				overflow: auto;
+			}
+			
+			.fab {
+				position: fixed;
+				right: 16px;
+				bottom: 16px;
+				z-index: 5;
+			}
+			
+			.action-bar {
+				position: fixed;
+				left: 0;
+				top: 0;
+				width: 100vw;
+				height: 85px;
+				background-color: #db4437;
+				z-index: 6;
+				box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.25);
+					-webkit-tap-highlight-color: rgba(0,0,0,0);
+					-webkit-user-select: none;
+					-moz-user-select: none;
+					-ms-user-select: none;
+					-o-user-select: none;
+					user-select: none;
+			}
+			
+			.status-bar {
+				position: fixed;
+				left: 0;
+				top: 0;
+				width: 100vw;
+				height: 25px;
+				background-color: rgba(0, 0, 0, 0.35);
+				z-index: 7;
+					-webkit-tap-highlight-color: rgba(0,0,0,0);
+					-webkit-user-select: none;
+					-moz-user-select: none;
+					-ms-user-select: none;
+					-o-user-select: none;
+					user-select: none;
+			}
+			
+			.app-bar-layout {
+				position: fixed;
+				left: 0;
+				top: 25px;
+				width: 100vw;
+				height: 60px;
+				background-color: rgba(0, 0, 0, 0);
+					-webkit-tap-highlight-color: rgba(0,0,0,0);
+					-webkit-user-select: none;
+					-moz-user-select: none;
+					-ms-user-select: none;
+					-o-user-select: none;
+					user-select: none;
+			}
+			
+			.menu-ic {
+				position: fixed;
+				left: 12px;
+				top: 37px;
+				width: 36px;
+				height: 36px;
+				border-radius: 50%;
+					-webkit-tap-highlight-color: rgba(0,0,0,0);
+					-webkit-user-select: none;
+					-moz-user-select: none;
+					-ms-user-select: none;
+					-o-user-select: none;
+					user-select: none;
+			}
+			
+			.tdot-ic {
+				position: fixed;
+				right: 12px;
+				top: 37px;
+				width: 36px;
+				height: 36px;
+				border-radius: 50%;
+					-webkit-tap-highlight-color: rgba(0,0,0,0);
+					-webkit-user-select: none;
+					-moz-user-select: none;
+					-ms-user-select: none;
+					-o-user-select: none;
+					user-select: none;
+			}
+			
+			.activity-title {
+				position: fixed;
+				height: 20px;
+				font-size: 20px;
+				padding: 0;
+				margin: 0;
+				top: 46px;
+				left: 68px;
+				color: #ffffff;
+					-webkit-tap-highlight-color: rgba(0,0,0,0);
+					-webkit-user-select: none;
+					-moz-user-select: none;
+					-ms-user-select: none;
+					-o-user-select: none;
+					user-select: none;
+			}
+			
+			.drawer {
+				height: 100vh;
+				width: 0;
+				position: fixed;
+				left: 0;
+				top: 0;
+				background-color: rgba(0, 0, 0, 0.6);
+				z-index: 8;
+				opacity: 0.0;
+					-webkit-transition: opacity 0.3s ease-in-out;
+					-moz-transition: opacity 0.3s ease-in-out;
+					-ms-transition: opacity 0.3s ease-in-out;
+					-o-transition: opacity 0.3s ease-in-out;
+					transition: opacity 0.3s ease-in-out;
+					-webkit-tap-highlight-color: rgba(0,0,0,0);
+					-webkit-user-select: none;
+					-moz-user-select: none;
+					-ms-user-select: none;
+					-o-user-select: none;
+					user-select: none;
+			}
+			
+			.drawer-bg {
+				position: fixed;
+				left: 0;
+				top: 0;
+				width: 300px;
+				box-shadow: 0px 0 5px 0px rgba(0, 0, 0, 0.7);
+				z-index: 9;
+				height: 100vh;
+				overflow: hidden;
+				background-color: #323232;
+				transform: translateX(-310px);
+				transition: 0.3s;
+					-webkit-tap-highlight-color: rgba(0,0,0,0);
+					-webkit-user-select: none;
+					-moz-user-select: none;
+					-ms-user-select: none;
+					-o-user-select: none;
+					user-select: none;
+			}
+			
+			.drawer-header {
+				background-color: #424242;
+				width: 100%;
+				height: 180px;
+					-webkit-tap-highlight-color: rgba(0,0,0,0);
+					-webkit-user-select: none;
+					-moz-user-select: none;
+					-ms-user-select: none;
+					-o-user-select: none;
+					user-select: none;
+			}
+			
+			.drawer-content {
+				overflow: auto;
+				height: 100%;
+				width: 100%;
+			}
+			
+			.material-icons {
+				color: #ffffff;
+					-webkit-tap-highlight-color: rgba(0,0,0,0);
+					-webkit-user-select: none;
+					-moz-user-select: none;
+					-ms-user-select: none;
+					-o-user-select: none;
+					user-select: none;
+			}
+			
+			:root {
+				--mdc-theme-primary: #9c27b0;
+				--mdc-theme-secondary: #ffab40;
+				--mdc-theme-background: #fff;
+			}
+			
+			.options {
+                position: fixed;
+                z-index: 10;
+                left: 0;
+                top: 0;
+                width: 0;
+                height: 0;
+                overflow: hidden;
+                background-color: rgb(0,0,0);
+                background-color: rgba(0, 0, 0, 0);
+                opacity: 0.0;
+				text-align: center;
+					-webkit-transition: opacity 0.3s ease-in-out;
+					-moz-transition: opacity 0.3s ease-in-out;
+					-ms-transition: opacity 0.3s ease-in-out;
+					-o-transition: opacity 0.3s ease-in-out;
+					transition: opacity 0.3s ease-in-out;
+					-webkit-tap-highlight-color: rgba(0,0,0,0);
+					-webkit-user-select: none;
+					-moz-user-select: none;
+					-ms-user-select: none;
+					-o-user-select: none;
+					user-select: none;
+            }
+            
+            .modal-content {
+                background-color: #fafafa;
+				box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.25);
+				margin: 25px auto;
+                padding: 0;
+                border-radius: 0px;
+                width: 100%;
+				height: 100%;
+                max-height: 100%;
+                overflow: hidden;
+				text-align: left;
+					-webkit-tap-highlight-color: rgba(0,0,0,0);
+					-webkit-user-select: none;
+					-moz-user-select: none;
+					-ms-user-select: none;
+					-o-user-select: none;
+					user-select: none;
+            }
+			
+			.dialog-actions-d {
+				position: fixed;
+				bottom: -200px;
+				right: 8px;
+			}
+			
+			.dialog-actions {
+				width: 100%;
+				text-align: right;
+				display: none;
+			}
+			
+			@media (min-width: 720px) {
+                .modal-content {
+                    margin: 100px auto;
+					border-radius: 8px;
+					height: auto;
+					width: 60%;
+                }
+				
+				.options {
+					background-color: rgba(0, 0, 0, 0.6);
+				}
+				
+				.dialog-actions-d {
+					width: 0;
+				}
+				
+				.dialog-actions {
+					display: block;
+				}
+            }
+			
+            .close {
+                color: #aaaaaa;
+                float: right;
+                font-size: 28px;
+                font-weight: bold;
+                width: 28px;
+                padding: 0;
+                margin: 0;
+					-webkit-tap-highlight-color: rgba(0,0,0,0);
+					-webkit-user-select: none;
+					-moz-user-select: none;
+					-ms-user-select: none;
+					-o-user-select: none;
+					user-select: none;
+            }
+			
+            .close:hover,
+            .close:focus {
+                color: #000000;
+                text-decoration: none;
+                cursor: pointer;
+            }
+			
+            .pcont {
+                overflow: auto;
+                padding: 20px;
+					-webkit-tap-highlight-color: rgba(0,0,0,0);
+					-webkit-user-select: none;
+					-moz-user-select: none;
+					-ms-user-select: none;
+					-o-user-select: none;
+					user-select: none;
+            }
+			
+			.btn-close {
+				color: #db4437;
+					-webkit-tap-highlight-color: rgba(0,0,0,0);
+					-webkit-user-select: none;
+					-moz-user-select: none;
+					-ms-user-select: none;
+					-o-user-select: none;
+					user-select: none;
+					-webkit-tap-highlight-color: rgba(0,0,0,0);
+			}
+			
+			.user-icon {
+					-webkit-tap-highlight-color: rgba(0,0,0,0);
+					-webkit-user-select: none;
+					-moz-user-select: none;
+					-ms-user-select: none;
+					-o-user-select: none;
+					user-select: none;
+			}
+			
+			.legal-text {
+				transition: 0.3s;
+				text-decoration: none;
+					-webkit-tap-highlight-color: rgba(0,0,0,0);
+			}
+			
+			.legal-text:hover {
+				text-decoration: underline;
+					-webkit-tap-highlight-color: rgba(0,0,0,0);
+			}
+			
+			.loadp {
+				position: fixed;
+				left: 0;
+				top: 85px;
+				height: 90%;
+				width: 100%;
+				display: table;
+				position: absolute;
+			}
+				
+			.load-middle {
+				display: table-cell;
+				vertical-align: middle;
+				text-align: center;
+			}
+			
+			.toast {
+				z-index: 15;
+			}
+			
+			textarea.mdl-textfield__input {
+				min-height: 90px;
+				max-height: 90px;
+			}
+			
+			.status-bar-wb {
+				z-index: 20;
+				width: 100vw;
+				height: 25px;
+				position: fixed;
+				left: 0;
+				top: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div class = "options" id="optbg">
+            <div class="modal-content" onclick="javascript:void(0)">
+                <div class="pcont">
+					<b style = "margin: 0; padding: 4; color: #424242; font-size: 20px;">About programm</b>
+					<p style = "margin: 0; padding: 4; color: #212121; font-size: 16px;">Name: Reviews Library</p>
+					<p style = "margin: 0; padding: 4; color: #212121; font-size: 16px;">Version: 1.0</p>
+					<p style = "margin: 0; padding: 4; color: #212121; font-size: 16px;">Developer: © 2020 Teslasoft</p>
+					<p style = "margin: 0; padding: 4; color: #212121; font-size: 16px;">Used libraries: <span style = "color: #db4437">JQuery 3.0.0</span>, <span style = "color: #db4437">Firebase 7.9.0 (Beta)</span>, <span style = "color: #db4437">Material Design Lite 1.3.0</span></p>
+					<p style = "margin: 0; padding: 4; color: #212121; font-size: 16px;">All content on this page licenced under <a class = "legal-text" style = "color: #4285f4; font-size: 16px;" href = "https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 Licence</a></p>
+					<div class = "dialog-actions">
+						<button class="btn-close mdl-button mdl-js-button mdl-js-ripple-effect" onclick = "javascript:hideAboutDialog()">Close</button>
+					</div>
+					<div class = "dialog-actions-d" id = "dialog1">
+						<button class="btn-close mdl-button mdl-js-button mdl-js-ripple-effect" onclick = "javascript:hideAboutDialog()">Close</button>
+					</div>
+                </div>
+            </div>
+        </div>
+		
+		<div class = "options" id="rews">
+            <div class="modal-content" onclick="javascript:void(0)">
+                <div class="pcont">
+					<b style = "margin: 0; padding: 4; color: #424242; font-size: 20px;">Send review</b>
+					<div class = "review-form">
+						<form>
+							<div class="inp mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+								<input class="mdl-textfield__input" type="text" id="name">
+								<label class="mdl-textfield__label" for="name">Enter your Name</label>
+							</div>
+						</form>
+						<br>
+						<form>
+							<div class="inp mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+								<input class="mdl-textfield__input" type="text" pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" id="email">
+								<label class="mdl-textfield__label" for="email">Enter your Email</label>
+								<span class="mdl-textfield__error">Badly formated email</span>
+							</div>
+						</form>
+						<br>
+						<form>
+							<div class="inp tinp mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+								<textarea class="mdl-textfield__input" type="text" id="review"></textarea>
+								<label class="mdl-textfield__label" for="review">Describe your ideas</label>
+							</div>
+						</form>
+						<br>
+					</div>
+					<div class = "dialog-actions">
+						<button style = "margin-left: 8px; margin-top: 8px;" class="btn-close mdl-button mdl-js-button mdl-js-ripple-effect" onclick = "javascript:closeForm()">Cancel</button>
+						<button style = "margin-left: 8px; margin-top: 8px;" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" onclick = "javascript:spellCheck()">Add review</button>
+					</div>
+					<div class = "dialog-actions-d" id = "dialog2">
+						<button style = "margin-left: 8px; margin-top: 8px;" class="btn-close mdl-button mdl-js-button mdl-js-ripple-effect" onclick = "javascript:closeForm()">Cancel</button>
+						<button style = "margin-left: 8px; margin-top: 8px;" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" onclick = "javascript:spellCheck()">Add review</button>
+					</div>
+                </div>
+            </div>
+        </div>
+		<div id="toast" class="toast mdl-js-snackbar mdl-snackbar">
+			<div class="mdl-snackbar__text"></div>
+			<button class="mdl-snackbar__action" type="button"></button>
+		</div>
+		<div class = "status-bar" onclick = "javascript:void(0:">
+			
+		</div>
+		<div class = "status-bar-wb" onclick = "javascript:void(0:">
+			
+		</div>
+		<div class = "action-bar">
+			<div class = "app-bar-layout">
+				<button id = "odrawer" class = "menu-ic mdl-button--icon mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--colored" onclick = "javascript:openDrawer()">
+					<i class="material-icons">dehaze</i>
+				</button>
+				<b class = "activity-title">Reviews library</b>
+				<button id="demo-menu-lower-right" class="tdot-ic mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect mdl-button--colored">
+					<i class="material-icons">more_vert</i>
+				</button>
+				<ul onclick = "javascript:showAboutDialog()" class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="demo-menu-lower-right">
+					<li class="mdl-menu__item">About programm</li>
+				</ul>
+			</div>
+		</div>
+		<div class = "drawer" id = "widget-drawer" onclick = "closeDrawer()">
+			
+		</div>
+		<div class = "drawer-bg" id = "drawer">
+			<div class = "drawer-content">
+				<div class = "drawer-header">
+					
+				</div>
+			</div>
+		</div>
+		<button class="fab mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" id = "fab" onclick = "javascript:openForm()" disabled>
+			<i class="material-icons">add</i>
+		</button>
+		
+		<div class = "layout-main">
+			<div class = "content">
+				<div class = "loadp" id = "loadp">
+					<div class="load-middle">
+						<div class = "mdl-spinner mdl-js-spinner is-active"></div>
+					</div>
+				</div>
+				<div class = "reviews" id = "reviews">
+					
+				</div>
+			</div>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.9.0/firebase.js"></script>
+
+		<script>
+			var config = {
+		    	apiKey: "AIzaSyDmLgvA5WUCbp4LPGaeCNTZgshAtJBVq38",
+				authDomain: "com-teslasoft-debug-test23.firebaseapp.com",
+				databaseURL: "https://com-teslasoft-debug-test23.firebaseio.com",
+				projectId: "com-teslasoft-debug-test23",
+				storageBucket: "com-teslasoft-debug-test23.appspot.com",
+				messagingSenderId: "94684379650",
+				appId: "1:94684379650:web:081c7efdf0721561ed051b",
+				measurementId: "G-GBQQJDKWB8"
+		    };
+		    
+		    firebase.initializeApp(config);
+		    var database = firebase.database();
+            
+            // Show/send messages
+            var firebaseOrdersCollection = database.ref().child('test/reviews');
+			
+			function spellCheck() {
+				if ($('#name').val() == "") {
+					showToast("Please enter name");
+				} else {
+					if ($('#email').val() == "") {
+						showToast("Please enter email");
+					} else {
+						if ($('#review').val() == "") {
+							showToast("Please enter review");
+						} else {
+							addReview()
+						}
+					}
+				}
+			}
+			
+		    function addReview() {
+				var today = new Date();
+				var dd = String(today.getDate()).padStart(2, '0');
+				var mm = String(today.getMonth() + 1).padStart(2, '0');
+				var hh = String(today.getHours()).padStart(2, '0');
+				var min = String(today.getMinutes()).padStart(2, '0');
+            
+				if (parseInt(hh) > 12) {
+					var hr = (parseInt(hh)-12);
+					hours = hr  + ':' + min + " PM";
+				} else {
+					var hr = (parseInt(hh)-12);
+					hours = hr  + ':' + min + " AM";
+				}
+            
+				today = mm + '-' + dd + ' ' + hours;
+				
+			    var order = {
+			    	Name: $('#name').val(),
+			    	Email: $('#email').val(),
+			    	Message: $('#review').val(),
+			    	Time: today
+			    };
+			
+			    firebaseOrdersCollection.push(order);
+				closeForm();
+				showToast("Thanks for your review");
+		    };
+		        
+		    firebaseOrdersCollection.on('value',function(orders) {
+			    //create an empty string that will hold our new HTML
+			    var allOrdersHtml = "";
+			    
+			    //this is saying foreach order do the following function...
+			    orders.forEach(function(firebaseOrderReference) {
+				    var order = firebaseOrderReference.val();
+				    //console.log(order);
+				    var individialOrderHtml = `
+						<div class = "rev-box">
+							<table style = "width: 100%">
+								<tr class = "rev-text">
+									<td style = "width: 90px; vertical-align: middle; padding: 10px;">
+				                        <img class = "user-icon" src = "./user.png">
+				                    </td>
+									<td style = "width: 100%">
+										<div class = "review-block">
+											<p class = "rev-name">`+order.Name+`</p>
+											<p class = "rev-email">`+order.Email+`</p>
+											<p class = "rev-message">`+order.Message+`</p>
+											<p class = "rev-time">`+order.Time+`</p>
+										</div>
+									</td>
+								</tr>
+							</table>
+						</div>`;
+				    
+					allOrdersHtml = allOrdersHtml + individialOrderHtml;
+					document.getElementById("loadp").style.display = "none";
+					document.getElementById("fab").disabled = false;
+			    });
+			
+			    //actaull put the html on the page inside the element with the id PreviousOrders
+			    $('#reviews').html(allOrdersHtml);
+				//alert(allOrdersHtml);
+		    });
+		</script>
+		<script>
+			function openDrawer() {
+				document.getElementById("widget-drawer").style.width = "100vw";
+				document.getElementById("widget-drawer").style.opacity = "1";
+				document.getElementById("drawer").style.transform = "translateX(0px)";
+			}
+        	
+			function closeDrawer() {
+				document.getElementById("odrawer").disabled = true;
+				document.getElementById("drawer").style.transform = "translateX(-310px)";
+				document.getElementById("widget-drawer").style.opacity = "0";
+				setTimeout( function() {
+					document.getElementById("widget-drawer").style.width = "0";
+					document.getElementById("odrawer").disabled = false;
+				}, 300);
+			}
+			
+			window.onclick = function(event) {
+                if (event.target == optbg) {
+                    document.getElementById("optbg").style.opacity = 0.0;
+                    setTimeout(function () {
+		                document.getElementById("optbg").style.width = "0px";
+    		            document.getElementById("optbg").style.height = "0px";
+						document.getElementById("dialog1").style.bottom = "-200px";
+                    }, 300);
+                } else if (event.target == rews) {
+                    document.getElementById("rews").style.opacity = 0.0;
+                    setTimeout(function () {
+		                document.getElementById("rews").style.width = "0px";
+    		            document.getElementById("rews").style.height = "0px";
+						document.getElementById("dialog2").style.bottom = "-200px";
+                    }, 300);
+                }
+            }
+			
+			function showAboutDialog() {
+				document.getElementById("optbg").style.width = "100%";
+		        document.getElementById("optbg").style.height = "100%";
+		        document.getElementById("optbg").style.opacity = 1.0;
+				document.getElementById("dialog1").style.bottom = "8px";
+			}
+			
+			function hideAboutDialog() {
+				document.getElementById("optbg").style.opacity = 0.0;
+		        setTimeout(function () {
+		            document.getElementById("optbg").style.width = "0px";
+		            document.getElementById("optbg").style.height = "0px";
+					document.getElementById("dialog1").style.bottom = "-200px";
+		        }, 300);
+			}
+			
+			function openForm() {
+				document.getElementById("rews").style.width = "100%";
+		        document.getElementById("rews").style.height = "100%";
+		        document.getElementById("rews").style.opacity = 1.0;
+				document.getElementById("dialog2").style.bottom = "8px";
+			}
+			
+			function closeForm() {
+				document.getElementById("rews").style.opacity = 0.0;
+		        setTimeout(function () {
+		            document.getElementById("rews").style.width = "0px";
+		            document.getElementById("rews").style.height = "0px";
+					document.getElementById("dialog2").style.bottom = "-200px";
+		        }, 300);
+			}
+		</script>
+		<script>
+			function showToast(dt) {
+				var notification = document.querySelector('.mdl-js-snackbar');
+				var data = {message: dt};
+				notification.MaterialSnackbar.showSnackbar(data);
+			}
+		</script>
+	</body>
+</html>
