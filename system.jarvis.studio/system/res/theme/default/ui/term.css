@@ -1,0 +1,30 @@
+.lh15 {
+	line-height: 16px;
+}
+			
+.term {
+	font-family: courier,fixed,swiss,sans-serif;
+	font-size: 16px;
+	color: #33d011;
+	background: none;
+	font-family: ati;
+}
+
+.termReverse {
+	color: #111111;
+	background: #33d011;
+	font-family: ati;
+}
+			
+.termErrorReserve {
+	color: #111111;
+	background: #b20021;
+	font-family: ati;
+}
+
+.termMain {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	cursor: none;
+}

@@ -1,0 +1,51 @@
+a, a:link, a:visited {
+	text-decoration: none;
+	color: #dddddd;
+}
+			
+p {
+	padding: 0;
+	color: #dddddd;
+	margin: 0;
+	font-family: ati;
+}
+			
+pre {
+	padding: 0;
+	color: #dddddd;
+	margin: 0;
+	font-family: ati;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #77dd11;
+	cursor: default;
+}
+
+a:active {
+	text-decoration: none;
+	color: #dddddd;
+}
+
+a.termopen, a.termopen:link, a.termopen:visited {
+	text-decoration: none;
+	color: #dddddd;
+	background: none;
+}
+
+a.termopen:hover {
+	text-decoration: none;
+	color: #222222;
+	background: #dddddd;
+}
+
+a.termopen:active {
+	text-decoration: none;
+	color: #222222;
+	background: #dddddd;
+}
+
+span.site {
+	color: #00ffff;
+}
