@@ -1,0 +1,6 @@
+<?php
+$ipc = $_SERVER['REMOTE_ADDR'];
+$file = './db/'.$ipc.'-counter.dat';
+echo file_get_contents($file);
+file_put_contents($file, "0");
+?>

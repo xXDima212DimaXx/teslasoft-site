@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "secured_store"
+AuthUserFile "/home/jarvisst/.htpasswds/public_html/res/images/secured_store/passwd"
+require valid-user

@@ -1,0 +1,2 @@
+77.75.76.164 (fulltextrobot-77-75-76-164.seznam.cz) Mozilla/5.0 (compatible; SeznamBot/3.2; +http://napoveda.seznam.cz/en/seznambot-intro/) jarvis.studio
+54.36.148.96 (ip-54-36-148-96.a.ahrefs.com) Mozilla/5.0 (compatible; AhrefsBot/6.1; +http://ahrefs.com/robot/) jarvis.studio

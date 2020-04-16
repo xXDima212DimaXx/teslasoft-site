@@ -1,0 +1,8 @@
+188.163.49.2 (188-163-49-2.broadband.kyivstar.net) Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36 jarvis.studio
+188.163.49.2 (188-163-49-2.broadband.kyivstar.net) Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36 jarvis.studio
+188.163.49.2 (188-163-49-2.broadband.kyivstar.net) Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36 jarvis.studio
+188.163.49.2 (188-163-49-2.broadband.kyivstar.net) Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36 jarvis.studio
+188.163.49.2 (188-163-49-2.broadband.kyivstar.net) Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36 jarvis.studio
+188.163.49.2 (188-163-49-2.broadband.kyivstar.net) Mozilla/5.0 (Linux; Android 10; Redmi 4X) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Mobile Safari/537.36 jarvis.studio
+144.76.60.98 (static.98.60.76.144.clients.your-server.de) Mozilla/5.0 (compatible; MegaIndex.ru/2.0; +http://megaindex.com/crawler) jarvis.studio
+144.76.60.98 (static.98.60.76.144.clients.your-server.de) Mozilla/5.0 (compatible; MegaIndex.ru/2.0; +http://megaindex.com/crawler) jarvis.studio

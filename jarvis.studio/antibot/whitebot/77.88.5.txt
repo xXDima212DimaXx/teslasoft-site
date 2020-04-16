@@ -1,0 +1,2 @@
+IP: 77.88.5.44
+UserAgent: Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)

@@ -1,0 +1,20 @@
+93.77.90.43 (93-77-90-43.dynamic-FTTB.kharkov.volia.com) Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36 users.jarvis.studio
+93.77.90.43 (93-77-90-43.dynamic-FTTB.kharkov.volia.com) Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36 users.jarvis.studio
+93.77.90.43 (93-77-90-43.dynamic-FTTB.kharkov.volia.com) Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36 users.jarvis.studio
+93.77.90.43 (93-77-90-43.dynamic-FTTB.kharkov.volia.com) Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36 users.jarvis.studio
+93.77.90.43 (93-77-90-43.dynamic-FTTB.kharkov.volia.com) Mozilla/5.0 (Linux; Android 10; Redmi 4X) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.136 Mobile Safari/537.36 users.jarvis.studio
+93.77.90.43 (93-77-90-43.dynamic-FTTB.kharkov.volia.com) Mozilla/5.0 (Linux; Android 10; Redmi 4X) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.136 Mobile Safari/537.36 users.jarvis.studio
+46.211.69.19 (46-211-69-19.mobile.kyivstar.net) Mozilla/5.0 (Linux; Android 10; Redmi 4X) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.136 Mobile Safari/537.36 users.jarvis.studio
+46.211.69.19 (46-211-69-19.mobile.kyivstar.net) Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.136 Safari/537.36 users.jarvis.studio
+46.211.69.19 (46-211-69-19.mobile.kyivstar.net) Mozilla/5.0 (Linux; Android 10; Redmi 4X) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.136 Mobile Safari/537.36 users.jarvis.studio
+46.211.69.19 (46-211-69-19.mobile.kyivstar.net) Mozilla/5.0 (Linux; Android 10; Redmi 4X) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.136 Mobile Safari/537.36 users.jarvis.studio
+46.211.69.19 (46-211-69-19.mobile.kyivstar.net) Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.136 Safari/537.36 users.jarvis.studio
+46.211.69.19 (46-211-69-19.mobile.kyivstar.net) Mozilla/5.0 (Linux; Android 10; Redmi 4X) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.136 Mobile Safari/537.36 users.jarvis.studio
+46.211.69.19 (46-211-69-19.mobile.kyivstar.net) Mozilla/5.0 (Linux; Android 10; Redmi 4X) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.136 Mobile Safari/537.36 users.jarvis.studio
+188.163.52.156 (188-163-52-156.broadband.kyivstar.net) Mozilla/5.0 (Linux; Android 10; Redmi 4X) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.136 Mobile Safari/537.36 users.jarvis.studio
+188.163.52.156 (188-163-52-156.broadband.kyivstar.net) Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36 users.jarvis.studio
+188.163.52.156 (188-163-52-156.broadband.kyivstar.net) Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36 users.jarvis.studio
+188.163.52.156 (188-163-52-156.broadband.kyivstar.net) Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36 users.jarvis.studio
+188.163.52.156 (188-163-52-156.broadband.kyivstar.net) Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36 users.jarvis.studio
+188.163.52.156 (188-163-52-156.broadband.kyivstar.net) Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36 users.jarvis.studio
+188.163.52.156 (188-163-52-156.broadband.kyivstar.net) Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36 users.jarvis.studio
