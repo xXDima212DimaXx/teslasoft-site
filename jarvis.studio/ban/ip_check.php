@@ -83,11 +83,15 @@ for ($n = 0; $n < ($ranges + 1); $n++) {
 $countries_number = sizeof($ban_countries);
 
 for ($i = 0; $i < ($countries_number + 1); $i++) {
-    if ($client_country == $ban_countries[$i]) {
-        $pass_check = 0;
-        exit($ban);
-    } else {
+    if ($client_country == "" && (strpos($client_ip, "66.249.93") !== false || strpos($client_ip, "66.249.91") !== false || strpos($client_ip, "66.249.91") !== false)) {
         $pass_check = 1;
+    } else {
+        if ($client_country == $ban_countries[$i]) {
+            $pass_check = 0;
+            exit($ban);
+        } else {
+            $pass_check = 1;
+        }
     }
 }
 

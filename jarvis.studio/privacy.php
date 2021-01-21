@@ -564,6 +564,8 @@ $application = <<<EOL
                                 <p class = "unselective" style = "color: #afafaf; margin: 8px auto; width: 100%;">&nbsp;&nbsp;&nbsp;&nbsp; • Мы не несем ответственности за ваши данные или за их утечку в следствии неправильного использования вами наших серсисов.</p>
                                 <p class = "unselective" style = "color: #afafaf; margin: 8px auto; width: 100%;">&nbsp;&nbsp;&nbsp;&nbsp; • Мы обязуемся хранить в секрете ваши данные и не передавать их третьим лицам, если это не противоречит действующему законодательству и данным условиям.</p>
                                 <p class = "unselective" style = "color: #db4437; margin: 8px auto; width: 100%;">МЫ НЕ ИСПОЛЬЗУЕМ ВАШИ ДАННЫЕ В РЕКЛАМНЫХ ЦЕЛЯХ.</p>
+                                <p class = "unselective" style = "color: #db4437; margin: 8px auto; width: 100%;"></p>
+                                <p class = "unselective" style = "color: #afafaf; margin: 8px auto; width: 100%;">Для более подробной информации ознакомтесь с нашими <a href = "https://jarvis.studio/terms">условиями использования</a>.</p>
                             </div>
                             <div class="mdl-card__actions mdl-card--border" style = "z-index: 2; background-color: #323232;">
                                 <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect unselective" style = "color: #db4437" onclick = "javascript:article1()">

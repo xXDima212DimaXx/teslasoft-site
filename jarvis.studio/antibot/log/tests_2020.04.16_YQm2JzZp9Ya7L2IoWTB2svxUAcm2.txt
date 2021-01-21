@@ -1,1 +1,8 @@
 77.75.78.162 (fulltextrobot-77-75-78-162.seznam.cz) Mozilla/5.0 (compatible; SeznamBot/3.2; +http://napoveda.seznam.cz/en/seznambot-intro/) jarvis.studio
+52.204.27.85 (ec2-52-204-27-85.compute-1.amazonaws.com) Mozilla/5.0 (compatible) jarvis.studio
+52.204.27.85 (ec2-52-204-27-85.compute-1.amazonaws.com) Mozilla/5.0 (compatible) jarvis.studio
+54.198.55.229 (ec2-54-198-55-229.compute-1.amazonaws.com) Mozilla/5.0 (compatible) jarvis.studio
+54.198.55.229 (ec2-54-198-55-229.compute-1.amazonaws.com) Mozilla/5.0 (compatible) jarvis.studio
+52.204.27.85 (ec2-52-204-27-85.compute-1.amazonaws.com) Mozilla/5.0 (compatible) jarvis.studio
+52.204.27.85 (ec2-52-204-27-85.compute-1.amazonaws.com) Mozilla/5.0 (compatible) jarvis.studio
+52.204.27.85 (ec2-52-204-27-85.compute-1.amazonaws.com) Mozilla/5.0 (compatible) jarvis.studio

@@ -526,8 +526,9 @@ $application = <<<EOL
                             </div>
                             <div class="mdl-card__supporting-text">
                                 <p class = "unselective" style = "color: #afafaf; margin: 8px auto; width: 100%;">Сюда нельзя заходить.</p>
-                                <p class = "unselective" style = "color: #afafaf; margin: 8px auto; width: 100%;">Проверьте правильность запроса или права доступа к этой странице</p>
-                                <p class = "unselective" style = "color: #ff3d00; margin: 8px auto; width: 100%;">Запрещено использовать <span style = "color: #ffff00;">&lt;script&gt;</span> в URL страницы</p>
+                                <p class = "unselective" style = "color: #afafaf; margin: 8px auto; width: 100%;">Проверьте правильность запроса или права доступа к этой странице.</p>
+                                <p class = "unselective" style = "color: #ff3d00; margin: 8px auto; width: 100%;">Запрещено использовать <span style = "color: #ffff00;">&lt;script&gt;</span> в URL страницы.</p>
+                                <p class = "unselective" style = "color: #ff3d00; margin: 8px auto; width: 100%;">Также запрещено использовать изображения/видео-/аудио- материалы с этого сайта. Для использования медиаконтента свяжитесь с нами через <a href = "mailto:contact.teslasoft@gmail.com">contact.teslasoft@gmail.com</a>. Все материалы данного сайта защищены авторским правом.</p>
                             </div>
                             <div class="mdl-card__actions mdl-card--border" style = "z-index: 2; background-color: #323232;">
                                 <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect unselective" style = "color: #db4437" onclick = "javascript:article1()">

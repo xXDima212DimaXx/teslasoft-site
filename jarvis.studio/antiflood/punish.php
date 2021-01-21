@@ -6,7 +6,7 @@ $punishment = <<<EOL
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Jarvis</title>
+        <title>You have been disconnected from server due unusual traffic</title>
         <meta charset = "utf-8">
         <meta name="google-site-verification" content="X9eiLiDwXWVlvPridgOtXE6ZePiHeRjQ1VoAs7DwOYo" />
         <meta name = "viewport" content="width=device-width, user-scalable=no">
@@ -184,26 +184,26 @@ $punishment = <<<EOL
             <div style = "margin: 16px auto;">
                 <div class="main-card-wide mdl-card mdl-shadow--2dp unselective" style = "text-align: left; margin: auto;">
                     <div class="mdl-card__title mdl-js-button mdl-js-ripple-effect" onclick = "javascript:void(0)" id = "banbg">
-                        <h2 class="mdl-card__title-text unselective">Отключение</h2>
+                        <h2 class="mdl-card__title-text unselective">Disconnecting</h2>
                     </div>
                     <div class="mdl-card__supporting-text">
                         <p class = "unselective">
-                            <span class = "ban-message unselective">Вы были отключены от сервера как потенциально нежелательный пользователь по причине отправки слишком большого количества запросов на сервер. Пожалуйста обновляйте страницу не так часто.</span>
+                            <span class = "ban-message unselective">You have been disconnected from server due unusual traffic.</span>
                         </p>
                         <p class = "unselective">
                             <span class = "unselective">
-                                <span>Ваш IP: </span><span class = "ban-ip selective-text">$client_ip</span>
+                                <span>Your IP: </span><span class = "ban-ip selective-text">$client_ip</span>
                             </span>
                         </p>
                         <p class = "unselective">
                             <span class = "unselective">
-                                <span>Для дополнительной информации свяжитесь с нами через: </span><span class = "ban-em selective-text">support@jarvis.studio</span>
+                                <span>Have a problems? Contact us: </span><span class = "ban-em selective-text">contact.teslasoft@gmail.com</span>
                             </span>
                         </p>
                     </div>
                     <div class="mdl-card__actions mdl-card--border">
                         <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect reload-button unselective" style = "color: #db4437" onclick = "javascript:reload()">
-                            Перезагрузить
+                            Reload
                         </a>
                     </div>
                 </div>

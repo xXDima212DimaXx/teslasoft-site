@@ -1,9 +1,9 @@
 <?php
 $over = <<<EOL
-<!DOCTYPE html>
+<!DOCTYPE html lang="en">
 <html>
     <head>
-        <title>Jarvis</title>
+        <title>You have been temporarily banned from this server due unusual traffic</title>
         <meta charset = "utf-8">
         <meta name="google-site-verification" content="X9eiLiDwXWVlvPridgOtXE6ZePiHeRjQ1VoAs7DwOYo" />
         <meta name = "viewport" content="width=device-width, user-scalable=no">
@@ -12,7 +12,7 @@ $over = <<<EOL
         <link rel = "stylesheet" href = "https://cdns.jarvis.studio/material/mdl/1.3.0/css/material.purple-red.min.css">
         <script src = "https://cdns.jarvis.studio/jquery/3.4.1/js/jquery.min.js"></script>
         <script src = "https://cdns.jarvis.studio/material/mdl/1.3.0/js/material.min.js"></script>
-        <script src = "https://www.google.com/recaptcha/api.js?hl=ru&onload=onloadCallback&render=explicit" async defer></script>
+        <script src = "https://www.google.com/recaptcha/api.js?hl=en&onload=onloadCallback&render=explicit" async defer></script>
         <style>
             html, body {
                 padding: 0;
@@ -186,20 +186,20 @@ $over = <<<EOL
             <div style = "margin: 16px auto;">
                 <div class="main-card-wide mdl-card mdl-shadow--2dp unselective" style = "text-align: left; margin: auto;">
                     <div class="mdl-card__title mdl-js-button mdl-js-ripple-effect" onclick = "javascript:void(0)" id = "banbg">
-                        <h2 class="mdl-card__title-text unselective">Отключение</h2>
+                        <h2 class="mdl-card__title-text unselective">Disconnected</h2>
                     </div>
                     <div class="mdl-card__supporting-text">
                         <p class = "unselective">
-                            <span class = "ban-message unselective">С вашего IP поступает подозрительный трафик, поэтому мы отключили вас.</span>
+                            <span class = "ban-message unselective">You have been temporarily banned from this server due unusual traffic.</span>
                         </p>
                         <p class = "unselective">
                             <span class = "unselective">
-                                <span>Для того, чтобы разблокировать доступ к сайту вам необходимо подтвердить что вы человек.</span>
+                                <span>To use this site please confirm that you are not a robot.</span>
                             </span>
                         </p>
                         <p class = "unselective">
                             <span class = "unselective">
-                                <span>Нажмите на флажок "Я не робот", а затем нажмите "Разблокировать".</span>
+                                <span>Check "I'm not a robot" then click "Unlock".</span>
                             </span>
                         </p>
                         <p class = "unselective">&nbsp;</p>
@@ -210,7 +210,7 @@ $over = <<<EOL
                     </div>
                     <div class="mdl-card__actions mdl-card--border">
                         <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect reload-button unselective" style = "color: #db4437" onclick = "javascript:reload()">
-                            Разблокировать
+                            Unlock
                         </a>
                     </div>
                 </div>

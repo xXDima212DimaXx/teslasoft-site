@@ -1,0 +1,14 @@
+<?php
+$isSecured = 0;
+$isBlocked = 0;
+$author = "Teslasoft";
+$link = "https://jarvis.studio";
+
+if ($isSecured == 0) {
+    $b64 = file_get_contents('./c01e685b-3ec5-4630-916f-7152821b62d9.dat');
+    header('Content-Type: image/png');
+} else {
+    replace($link);
+    exit;
+}
+?>

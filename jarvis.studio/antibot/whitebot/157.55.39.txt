@@ -1,0 +1,2 @@
+IP: 157.55.39.50
+UserAgent: Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)

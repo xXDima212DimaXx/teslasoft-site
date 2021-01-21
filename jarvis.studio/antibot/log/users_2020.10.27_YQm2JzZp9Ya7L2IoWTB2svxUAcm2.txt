@@ -1,0 +1,12 @@
+188.163.49.34 (188-163-49-34.broadband.kyivstar.net) Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36 jarvis.studio
+188.163.49.34 (188-163-49-34.broadband.kyivstar.net) Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36 jarvis.studio
+188.163.49.34 (188-163-49-34.broadband.kyivstar.net) Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36 jarvis.studio
+188.163.49.34 (188-163-49-34.broadband.kyivstar.net) Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36 jarvis.studio
+188.163.49.34 (188-163-49-34.broadband.kyivstar.net) Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36 jarvis.studio
+188.163.49.34 (188-163-49-34.broadband.kyivstar.net) Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36 jarvis.studio
+188.163.49.34 (188-163-49-34.broadband.kyivstar.net) Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36 jarvis.studio
+188.163.49.34 (188-163-49-34.broadband.kyivstar.net) Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36 jarvis.studio
+188.163.49.34 (188-163-49-34.broadband.kyivstar.net) Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36 jarvis.studio
+66.249.93.32 (google-proxy-66-249-93-32.google.com) Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4143.7 Safari/537.36 Chrome-Lighthouse jarvis.studio
+66.249.93.34 (google-proxy-66-249-93-34.google.com) Mozilla/5.0 (Linux; Android 7.0; Moto G (4)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4143.7 Mobile Safari/537.36 Chrome-Lighthouse jarvis.studio
+188.163.49.34 (188-163-49-34.broadband.kyivstar.net) Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36 jarvis.studio

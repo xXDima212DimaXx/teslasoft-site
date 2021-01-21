@@ -30,6 +30,7 @@ $application = <<<EOL
         <script src='https://www.googletagmanager.com/gtm.js?id=GTM-KTTNPDT'></script>
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158890085-1"></script>
         <script async src='https://www.google-analytics.com/analytics.js'></script>
+        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5e99b56306150d63"></script>
         <script type="text/javascript" id="cookieinfo"
 	        src="//cookieinfoscript.com/js/cookieinfo.min.js"
 	        data-bg="#323232"
@@ -423,6 +424,18 @@ $application = <<<EOL
                 margin: 0;
                 background-color: #db4437;
             }
+            
+            .ad-fullwidth {
+                display: block;
+                margin: auto;
+                background-color: #424242;
+            }
+            
+            .ad-drawer {
+                display: block;
+                margin: auto;
+                background-color: #424242;
+            }
         </style>
     </head>
     <body>
@@ -529,19 +542,29 @@ $application = <<<EOL
                             <div class="mdl-card__supporting-text">
                                 <p class = "unselective" style = "color: #afafaf; margin: 8px auto; width: 100%;">Заинтересовал проект? Вы можете поддержать его или стать участником.</p>
                                 <p class = "unselective" style = "color: #afafaf; margin: 8px auto; width: 100%;">Для участия вы должны соответствовать следующим требованиям и владеть следующими навыками:</p>
-                                <p class = "unselective" style = "color: #afafaf; margin: 8px auto; width: 100%;">&nbsp;&nbsp;&nbsp;&nbsp; • Действуют возрастные ограничения: 16+;</p>
-                                <p class = "unselective" style = "color: #afafaf; margin: 8px auto; width: 100%;">&nbsp;&nbsp;&nbsp;&nbsp; • Навыки веб-разработки;</p>
-                                <p class = "unselective" style = "color: #afafaf; margin: 8px auto; width: 100%;">&nbsp;&nbsp;&nbsp;&nbsp; • Навыки разработки Android-приложений;</p>
-                                <p class = "unselective" style = "color: #afafaf; margin: 8px auto; width: 100%;">&nbsp;&nbsp;&nbsp;&nbsp; • Навыки разработки MS-Windows-приложений(VC++, C, C#);</p>
+                                <p class = "unselective" style = "color: #afafaf; margin: 8px auto; width: 100%;">&nbsp;&nbsp;&nbsp;&nbsp; • Действуют возрастные ограничения: 14+;</p>
+                                <p class = "unselective" style = "color: #afafaf; margin: 8px auto; width: 100%;">&nbsp;&nbsp;&nbsp;&nbsp; • Вы должны обладать хотябы одним из следующих навыков: веб-разработа, разработка Android-приложений, разработка MS-Windows-приложений(VC++, C, C#), разработка на языке Python, умение работы с Unix (Linux)-подобными системами и разработкой программного обеспечения для них, умение и опыт работы с Arduino/Raspberry PI;</p>
+                                <p class = "unselective" style = "color: #afafaf; margin: 8px auto; width: 100%;">&nbsp;&nbsp;&nbsp;&nbsp; • Также допускаются маркетинговые умения, графический дизайн;</p>
                                 <p class = "unselective" style = "color: #afafaf; margin: 8px auto; width: 100%;">&nbsp;&nbsp;&nbsp;&nbsp; • Знания алгоритмов;</p>
                                 <p class = "unselective" style = "color: #afafaf; margin: 8px auto; width: 100%;">&nbsp;&nbsp;&nbsp;&nbsp; • Знания математики;</p>
                                 <p class = "unselective" style = "color: #afafaf; margin: 8px auto; width: 100%;">&nbsp;&nbsp;&nbsp;&nbsp; • Пространственное и аналитическое мышление;</p>
                                 <p class = "unselective" style = "color: #afafaf; margin: 8px auto; width: 100%;">&nbsp;&nbsp;&nbsp;&nbsp; • Умение структурировать и систематизировать данные;</p>
-                                <p class = "unselective" style = "color: #afafaf; margin: 8px auto; width: 100%;">&nbsp;&nbsp;&nbsp;&nbsp; • Знание и умение работать с командной строкой Windows и терминалом Linux;</p>
                                 <p class = "unselective" style = "color: #afafaf; margin: 8px auto; width: 100%;">&nbsp;&nbsp;&nbsp;&nbsp; • Умение установки программ/операционных систем.</p>
-								<p class = "unselective" style = "color: #afafaf; margin: 8px auto; width: 100%;">&nbsp;&nbsp;&nbsp;&nbsp; • Действительный Google аккаунт.</p>
-                                <p class = "unselective" style = "color: #afafaf; margin: 8px auto; width: 100%;">Если вы соответствуете данным требованиям и хотите вступить в проект, заполните эту <a href = "https://jarvis.studio/supporters/register">форму</a> (или с помощью <a href = "https://docs.google.com/forms/d/e/1FAIpQLSfxk4reH3a4cqmWH7B5x08Dl6ccQGrPzGVMHeJxbRU8pKPRLQ/viewform?usp=sf_link">Google Forms</a>).</p>
-                                <p class = "unselective" style = "color: #db4437; margin: 8px auto; width: 100%;">Учтите что не все могут быть приняты в проект. Прием и рассмотрение заявок осуществляет администрация по своему усмотрению. Если вашу заявку отклонили вы можете подать еще одну не раньше чем через 1 месяц. Все заявки отправленные в этот период будут проигнорированы. Злоупотребление количеством заявок наказывается блокировкой аккаунта на 1 месяц.</p>
+                                <p class = "unselective" style = "color: #afafaf; margin: 8px auto; width: 100%;">&nbsp;&nbsp;&nbsp;&nbsp; • Действительный Google аккаунт.</p>
+                                <p class = "unselective" style = "color: #afafaf; margin: 8px auto; width: 100%;">&nbsp;&nbsp;&nbsp;&nbsp; • Действительный Jarvis аккаунт.</p>
+                                <p class = "unselective" style = "color: #ffff00; margin: 8px auto; width: 100%;">&nbsp;&nbsp;&nbsp;&nbsp; • А самое главное - желание и терпение.</p>
+                                <p class = "unselective" style = "color: #ffff00; margin: 8px auto; width: 100%;">&nbsp;&nbsp;&nbsp;&nbsp; • Для подтверждения желания и вступления в проект необходимо внести членский взнос в размере $3 (для этого перейдите на <a href = "https://jarvis.studio/payments/membership">эту страницу</a>). ВАЖНО! Не используйте кнопку доната ниже для оплаты членского взноса.</p>
+                                <p class = "unselective" style = "color: #afafaf; margin: 8px auto; width: 100%;">Если вы соответствуете данным требованиям и хотите вступить в проект, заполните эту <a href = "https://docs.google.com/forms/d/e/1FAIpQLSfxk4reH3a4cqmWH7B5x08Dl6ccQGrPzGVMHeJxbRU8pKPRLQ/viewform?usp=sf_link">регистрационную форму</a>.</p>
+                                <p class = "unselective" style = "color: #db4437; margin: 8px auto; width: 100%;">ВАЖНО! Заявка рассматривается администратором лично. Это может занять несколько дней. Учтите что не все могут быть приняты в проект. Прием и рассмотрение заявок осуществляет администрация по своему усмотрению. Если вашу заявку отклонили вы можете подать еще одну не раньше чем через 1 месяц. Все заявки отправленные в этот период будут проигнорированы. Злоупотребление количеством заявок наказывается блокировкой аккаунта на 1 месяц.</p>
+                                <hr>
+                                <p class = "unselective" style = "color: #ffff00; margin: 8px auto; width: 100%;">Хотите повысить шансы рассмотрения заявки? Тогда регистрируйтесь через наш Discord-сервер: <a href = "https://discord.com/invite/Ak6ER6f">https://discord.com/invite/Ak6ER6f</a></p>
+                                <hr>
+                                <p class = "unselective" style = "color: #afafaf; margin: 8px auto; width: 100%;">Вы также можете поддержать проект материально (Paypal):</p>
+                                <form action="https://www.paypal.com/donate" method="post" target="_top">
+                                    <input type="hidden" name="hosted_button_id" value="RJF63JTWG7Y48" />
+                                    <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+                                    <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+                                </form>
                             </div>
                             <div class="mdl-card__actions mdl-card--border" style = "z-index: 2; background-color: #323232;">
                                 <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect unselective" style = "color: #db4437" onclick = "javascript:article1()">
@@ -550,11 +573,17 @@ $application = <<<EOL
                             </div>
                         </div>
                     </div>
-                    
+                    <p class = "unselective">&nbsp;</p>
+                    <div class="addthis_inline_follow_toolbox" style = "text-align: center; margin: auto; min-width: 320px; max-width: 420px; padding: 16px;"></div>
+                    <p class = "unselective">&nbsp;</p>
+                    <p class = "unselective" style = "padding: 16px; text-align: center;">Реклама</p>
+                    <div class = "ad-fullwidth" id = "ad-bottom-w">
+                        <iframe id = "ad-bottom-wide"></iframe>
+                    </div>
                     <p class = "unselective">&nbsp</p>
 		        </div>
 		        <div class = "footer">
-		            <p class = "copyright"><a>© 2017-2020 Teslasoft. All rights reserved</a>&nbsp;|&nbsp;<a href = "https://jarvis.studio/sitemap.html">Site map</a>&nbsp;<a href = "https://jarvis.studio/sitemap.xml">(XML)</a>&nbsp;|&nbsp;<a href = "https://jarvis.studio">Главная</a></p>
+		            <p class = "copyright"><a>© 2017-2020 Teslasoft. All rights reserved</a>&nbsp;|&nbsp;<a href = "https://jarvis.studio/sitemap.html">Site map</a>&nbsp;<a href = "https://jarvis.studio/sitemap.xml">(XML)</a>&nbsp;|&nbsp;<a href = "https://jarvis.studio/terms">Условия использования</a>&nbsp;|&nbsp;<a href = "https://jarvis.studio/privacy">Конфиденциальность</a>&nbsp;|&nbsp;<a href = "https://jarvis.studio/cookies">Использование Cookies</a>&nbsp;|&nbsp;<a href = "https://jarvis.studio">Главная</a></p>
 		        </div>
             </div>
 	    </div>
@@ -621,6 +650,9 @@ $application = <<<EOL
         </script>
 	    <script>
 		    window.onload = function() {
+		        document.getElementById('loadp').style.zIndex = "-5";
+		        document.getElementById('card5bg').style.background = "url('https://jarvis.studio/res/images/img?id=card5_bg_webp') center / cover";
+		        
 		        if(document.createStyleSheet) {
                     document.createStyleSheet('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap');
                     document.createStyleSheet('https://fonts.googleapis.com/icon?family=Material+Icons');
@@ -633,10 +665,23 @@ $application = <<<EOL
                     newSS.href='data:text/css,'+escape(styles);
                     document.getElementsByTagName("head")[0].appendChild(newSS);
                 }
-		        setTimeout(function() {
-		            document.getElementById('loadp').style.zIndex = "-5";
-		            document.getElementById('card5bg').style.background = "url('https://jarvis.studio/res/images/img?id=card5_bg_webp') center / cover";
-		        }, 500);
+                
+                // Initialize AD system
+		        var deviceWidth = window.innerWidth;
+		        
+		        if (deviceWidth < 850) {
+		            document.getElementById('ad-bottom-wide').src = "https://s2---sd-r56v7-g-ad.jarvis.studio/ad/mobile/wide_horizontal.php?id=test";
+		            document.getElementById('ad-bottom-wide').width = "320px";
+		            document.getElementById('ad-bottom-wide').height = "50px";
+		            document.getElementById('ad-bottom-w').style.width = "320px";
+		            document.getElementById('ad-bottom-w').style.height = "50px";
+		        } else {
+		            document.getElementById('ad-bottom-wide').src = "https://s2---sd-r56v7-g-ad.jarvis.studio/ad/wide_horizontal.php?id=test";
+		            document.getElementById('ad-bottom-wide').width = "800px";
+		            document.getElementById('ad-bottom-wide').height = "90px";
+		            document.getElementById('ad-bottom-w').style.width = "800px";
+		            document.getElementById('ad-bottom-w').style.height = "90px";
+		        }
 		    };
 		    
 		    document.addEventListener('contextmenu', event => event.preventDefault());

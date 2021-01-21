@@ -1,0 +1,1 @@
+<script>window.location.assign("https://jarvis.studio/StatusService");</script>

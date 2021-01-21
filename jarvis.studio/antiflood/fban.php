@@ -23,6 +23,7 @@ if ($violationsCounter < 10) {
         } elseif($_SESSION['last_request_count'] >= 5){
             $violationsCounter++;
             file_put_contents($file, $violationsCounter);
+            // echo("<script>alert('".$file."');</script>");
             echo($punishment);
             exit;
         }

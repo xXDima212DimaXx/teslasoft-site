@@ -4,12 +4,29 @@
 		<loc>
 		    https://jarvis.studio
 		</loc>
-		<lastmod>2020-03-26</lastmod>
+		<lastmod>2021-01-13</lastmod>
 		<changefreq>always</changefreq>
 		<priority>1</priority>
 		<image:image>
 		    <image:loc>
-		        https://jarvis.studio/res/images/teslasoft-logo.png
+		        https://jarvis.studio/res/images/img?id=teslasoft_logo
+		    </image:loc>
+		    <image:title>
+		        Teslasoft
+		    </image:title>
+		    <image:caption>
+		        Teslasoft logo
+		    </image:caption>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://jarvis.studio/discord</loc>
+		<lastmod>2021-01-13</lastmod>
+		<changefreq>always</changefreq>
+		<priority>0.8</priority>
+		<image:image>
+		    <image:loc>
+		        https://jarvis.studio/res/images/img?id=teslasoft_logo
 		    </image:loc>
 		    <image:title>
 		        Teslasoft
@@ -21,44 +38,21 @@
 	</url>
 	<url>
 		<loc>https://jarvis.studio/login</loc>
-		<lastmod>2020-03-28</lastmod>
+		<lastmod>2020-11-09</lastmod>
 		<changefreq>always</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://jarvis.studio/register</loc>
-		<lastmod>2020-03-28</lastmod>
+		<lastmod>2020-11-09</lastmod>
 		<changefreq>always</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
-		<loc>https://jarvis.studio/about</loc>
-		<lastmod>2020-03-26</lastmod>
-		<changefreq>always</changefreq>
-		<priority>0.8</priority>
-	</url>
-	<url>
 		<loc>https://jarvis.studio/participate</loc>
-		<lastmod>2020-03-26</lastmod>
+		<lastmod>2021-01-12</lastmod>
 		<changefreq>always</changefreq>
 		<priority>0.8</priority>
-	</url>
-	<url>
-		<loc>https://jarvis.studio/supporters/register</loc>
-		<lastmod>2020-03-26</lastmod>
-		<changefreq>always</changefreq>
-		<priority>0.8</priority>
-		<image:image>
-		    <image:loc>
-		        https://jarvis.studio/res/images/teslasoft-logo.png
-		    </image:loc>
-		    <image:title>
-		        Teslasoft
-		    </image:title>
-		    <image:caption>
-		        Teslasoft logo
-		    </image:caption>
-		</image:image>
 	</url>
 	<url>
 		<loc>https://jarvis.studio/search</loc>
@@ -68,12 +62,18 @@
 	</url>
 	<url>
 		<loc>https://jarvis.studio/cookies</loc>
-		<lastmod>2020-03-28</lastmod>
+		<lastmod>2020-11-09</lastmod>
 		<changefreq>always</changefreq>
 		<priority>0.6</priority>
 	</url>
 	<url>
 		<loc>https://jarvis.studio/privacy</loc>
+		<lastmod>2020-11-09</lastmod>
+		<changefreq>always</changefreq>
+		<priority>0.6</priority>
+	</url>
+	<url>
+		<loc>https://jarvis.studio/terms</loc>
 		<lastmod>2020-03-26</lastmod>
 		<changefreq>always</changefreq>
 		<priority>0.6</priority>

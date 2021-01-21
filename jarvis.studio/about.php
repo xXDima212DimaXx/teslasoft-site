@@ -30,6 +30,7 @@ $application = <<<EOL
         <script src='https://www.googletagmanager.com/gtm.js?id=GTM-KTTNPDT'></script>
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158890085-1"></script>
         <script async src='https://www.google-analytics.com/analytics.js'></script>
+        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5e99b56306150d63"></script>
         <script type="text/javascript" id="cookieinfo"
 	        src="//cookieinfoscript.com/js/cookieinfo.min.js"
 	        data-bg="#323232"
@@ -423,6 +424,18 @@ $application = <<<EOL
                 margin: 0;
                 background-color: #db4437;
             }
+            
+            .ad-fullwidth {
+                display: block;
+                margin: auto;
+                background-color: #424242;
+            }
+            
+            .ad-drawer {
+                display: block;
+                margin: auto;
+                background-color: #424242;
+            }
         </style>
     </head>
     <body>
@@ -538,6 +551,13 @@ $application = <<<EOL
                             </div>
                         </div>
                     </div>
+                    <p class = "unselective">&nbsp;</p>
+                    <div class="addthis_inline_follow_toolbox" style = "text-align: center; margin: auto; min-width: 320px; max-width: 420px; padding: 16px;"></div>
+                    <p class = "unselective">&nbsp;</p>
+                    <p class = "unselective" style = "padding: 16px; text-align: center;">Реклама</p>
+                    <div class = "ad-fullwidth" id = "ad-bottom-w">
+                        <iframe id = "ad-bottom-wide"></iframe>
+                    </div>
                     <p class = "unselective">&nbsp</p>
 		        </div>
 		        <div class = "footer">
@@ -608,6 +628,9 @@ $application = <<<EOL
         </script>
 	    <script>
 		    window.onload = function() {
+		        document.getElementById('loadp').style.zIndex = "-5";
+		        document.getElementById('card1bg').style.background = "url('https://jarvis.studio/res/images/img?id=card1_bg_webp') center / cover";
+		        
 		        if(document.createStyleSheet) {
                     document.createStyleSheet('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap');
                     document.createStyleSheet('https://fonts.googleapis.com/icon?family=Material+Icons');
@@ -621,10 +644,22 @@ $application = <<<EOL
                     document.getElementsByTagName("head")[0].appendChild(newSS);
                 }
                 
-		        setTimeout(function() {
-		            document.getElementById('loadp').style.zIndex = "-5";
-		            document.getElementById('card1bg').style.background = "url('https://jarvis.studio/res/images/img?id=card1_bg_webp') center / cover";
-		        }, 500);
+                // Initialize AD system
+		        var deviceWidth = window.innerWidth;
+		        
+		        if (deviceWidth < 850) {
+		            document.getElementById('ad-bottom-wide').src = "https://s2---sd-r56v7-g-ad.jarvis.studio/ad/mobile/wide_horizontal.php?id=test";
+		            document.getElementById('ad-bottom-wide').width = "320px";
+		            document.getElementById('ad-bottom-wide').height = "50px";
+		            document.getElementById('ad-bottom-w').style.width = "320px";
+		            document.getElementById('ad-bottom-w').style.height = "50px";
+		        } else {
+		            document.getElementById('ad-bottom-wide').src = "https://s2---sd-r56v7-g-ad.jarvis.studio/ad/wide_horizontal.php?id=test";
+		            document.getElementById('ad-bottom-wide').width = "800px";
+		            document.getElementById('ad-bottom-wide').height = "90px";
+		            document.getElementById('ad-bottom-w').style.width = "800px";
+		            document.getElementById('ad-bottom-w').style.height = "90px";
+		        }
 		    };
 		    
 		    document.addEventListener('contextmenu', event => event.preventDefault());

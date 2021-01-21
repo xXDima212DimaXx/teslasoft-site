@@ -1,0 +1,3 @@
+144.76.60.98 (static.98.60.76.144.clients.your-server.de) Mozilla/5.0 (compatible; MegaIndex.ru/2.0; +http://megaindex.com/crawler) jarvis.studio
+77.75.78.162 (fulltextrobot-77-75-78-162.seznam.cz) Mozilla/5.0 (compatible; SeznamBot/3.2; +http://napoveda.seznam.cz/en/seznambot-intro/) jarvis.studio
+77.75.78.166 (fulltextrobot-77-75-78-166.seznam.cz) Mozilla/5.0 (compatible; SeznamBot/3.2; +http://napoveda.seznam.cz/en/seznambot-intro/) jarvis.studio

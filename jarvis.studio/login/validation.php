@@ -33,7 +33,7 @@ $err = <<<EOL
         <meta name="google-site-verification" content="X9eiLiDwXWVlvPridgOtXE6ZePiHeRjQ1VoAs7DwOYo" />
         <meta name = "viewport" content="width=device-width, user-scalable=no">
         <meta name = "theme-color" content = "#121212">
-        <link rel = "icon" type = "image/png" href = "https://jarvis.studio/res/images/jarvis.png">
+        <link rel = "icon" type = "image/png" href = "https://jarvis.studio/res/images/img?id=favicon">
         <link rel = "stylesheet" href = "https://cdns.jarvis.studio/material/mdl/1.3.0/css/material.purple-red.min.css">
         <script src = "https://cdns.jarvis.studio/jquery/3.4.1/js/jquery.min.js"></script>
         <script src = "https://cdns.jarvis.studio/material/mdl/1.3.0/js/material.min.js"></script>
@@ -215,7 +215,7 @@ $err = <<<EOL
         <div class = "layout-main unselective">
             <div class = "cheader">
                 <a href = "/">
-                    <img class = "header-icon unselective" src = "https://jarvis.studio/res/images/teslasoft-logo.png">
+                    <img class = "header-icon unselective" src = "https://jarvis.studio/res/images/img?id=teslasoft_logo">
                 </a>
             </div>
             <div style = "margin: 16px auto;">
@@ -254,7 +254,7 @@ $err = <<<EOL
                     document.getElementsByTagName("head")[0].appendChild(newSS);
                 }
                 
-                document.getElementById('banbg').style.background = "url('https://jarvis.studio/res/images/card1_bg.webp') center / cover";
+                document.getElementById('banbg').style.background = "url('https://jarvis.studio/res/images/img?id=card1_bg_webp') center / cover";
                 
 		        setTimeout(function() {
 		            document.getElementById('loadp').style.zIndex = "-5";

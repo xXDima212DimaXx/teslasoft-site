@@ -23,11 +23,10 @@ Disallow: /time.php
 Disallow: /captcha.php
 Disallow: /login/security_check.php
 Disallow: /register/security_check.php
-Allow: /supporters/
-Allow: /login/oauth.php
-Allow: /register/rg.php
+Disallow: /supporters/
+Disallow: /about
 Allow: /login
 Allow: /register
 Allow: /
-Allow: /index
+Allow: /participate
 Sitemap: https://jarvis.studio/sitemap.xml
